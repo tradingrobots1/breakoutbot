@@ -466,7 +466,7 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "MATH": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 0.7998,
       "orb_low": 0.7998,
       "pdh": 0.87,
