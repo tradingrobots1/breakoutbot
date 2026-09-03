@@ -122,5 +122,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "MATH",
+    "entry_datetime": "2026-09-03T10:09:28.736273-04:00",
+    "entry_price": 0.864300012588501,
+    "orb15": 0.7998,
+    "pdh": 0.87,
+    "pct_change_seen": 10.2,
+    "stop_price": 0.7998,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2500.0,
+    "risk_amount": 12.5,
+    "shares": 193,
+    "position_value": 166.81,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T10:24:28.736273-04:00",
+      "m30": "2026-09-03T10:39:28.736273-04:00",
+      "h1": "2026-09-03T11:09:28.736273-04:00",
+      "h2": "2026-09-03T12:09:28.736273-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
