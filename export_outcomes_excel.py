@@ -16,7 +16,24 @@ from openpyxl.utils import get_column_letter
 
 OUTCOMES_FILE = Path(__file__).parent / "outcomes.json"
 OUT_FILE = Path(__file__).parent / "docs" / "Breakoutbot_Outcomes.xlsx"
-STARTING_CAPITAL = 2500.0  # debe coincidir con cfg.starting_capital de breakout_scanner.py
+
+ACCOUNT_CONFIG_FILE = Path(__file__).parent / "account_config.json"
+_ACCOUNT_CONFIG_DEFAULTS = {"starting_capital": 2500.0, "risk_per_trade_pct": 0.5}
+
+
+def _load_account_config() -> dict:
+    """Misma fuente que breakout_scanner.py (account_config.json) — evita
+    tener el capital inicial hardcodeado y desincronizado en cada script."""
+    if ACCOUNT_CONFIG_FILE.exists():
+        try:
+            data = json.loads(ACCOUNT_CONFIG_FILE.read_text(encoding="utf-8"))
+            return {**_ACCOUNT_CONFIG_DEFAULTS, **data}
+        except Exception:
+            pass
+    return dict(_ACCOUNT_CONFIG_DEFAULTS)
+
+
+STARTING_CAPITAL = _load_account_config()["starting_capital"]
 
 
 def fmt_pct(v):

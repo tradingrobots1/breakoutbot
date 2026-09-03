@@ -108,8 +108,26 @@ class Config:
     # importe fijo por trade arriesgaría cantidades muy distintas sin
     # querer. Sin stop calculable no hay forma de tamañar con riesgo
     # conocido, así que esas señales se descartan (ver run_once()).
-    starting_capital: float = 2500.0
-    risk_per_trade_pct: float = 0.5
+    # Se leen de account_config.json (fuente única compartida con
+    # outcome_tracker.py y export_outcomes_excel.py) — estos valores por
+    # defecto solo se usan si el archivo falta o está corrupto, para no
+    # tumbar el scanner por un problema de configuración.
+    starting_capital: float = field(default_factory=lambda: _load_account_config()["starting_capital"])
+    risk_per_trade_pct: float = field(default_factory=lambda: _load_account_config()["risk_per_trade_pct"])
+
+
+ACCOUNT_CONFIG_FILE = Path(__file__).parent / "account_config.json"
+_ACCOUNT_CONFIG_DEFAULTS = {"starting_capital": 2500.0, "risk_per_trade_pct": 0.5}
+
+
+def _load_account_config() -> dict:
+    if ACCOUNT_CONFIG_FILE.exists():
+        try:
+            data = json.loads(ACCOUNT_CONFIG_FILE.read_text(encoding="utf-8"))
+            return {**_ACCOUNT_CONFIG_DEFAULTS, **data}
+        except Exception:
+            log.warning("[CONFIG] account_config.json corrupto, usando valores por defecto")
+    return dict(_ACCOUNT_CONFIG_DEFAULTS)
 
 
 cfg = Config()

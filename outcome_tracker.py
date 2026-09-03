@@ -58,7 +58,24 @@ STALE_CHECKPOINT_GIVEUP_HOURS = 48  # si lleva vencido más de esto sin poder
                                      # obtener precio, se marca "N/A" en vez
                                      # de reintentar para siempre (ticker
                                      # deslistado, sin liquidez, etc.)
-STARTING_CAPITAL = 2500.0  # debe coincidir con cfg.starting_capital de breakout_scanner.py
+
+ACCOUNT_CONFIG_FILE = Path(__file__).parent / "account_config.json"
+_ACCOUNT_CONFIG_DEFAULTS = {"starting_capital": 2500.0, "risk_per_trade_pct": 0.5}
+
+
+def _load_account_config() -> dict:
+    """Misma fuente que breakout_scanner.py (account_config.json) — evita
+    tener el capital inicial hardcodeado y desincronizado en cada script."""
+    if ACCOUNT_CONFIG_FILE.exists():
+        try:
+            data = json.loads(ACCOUNT_CONFIG_FILE.read_text(encoding="utf-8"))
+            return {**_ACCOUNT_CONFIG_DEFAULTS, **data}
+        except Exception:
+            logger.warning("[CONFIG] account_config.json corrupto, usando valores por defecto")
+    return dict(_ACCOUNT_CONFIG_DEFAULTS)
+
+
+STARTING_CAPITAL = _load_account_config()["starting_capital"]
 
 
 def get_current_equity(outcomes: list[dict]) -> float:
