@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T10:20:23.021246-04:00",
+  "gainers_last_refresh": "2026-09-03T10:25:51.855633-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -205,12 +205,13 @@
       "first_seen": "2026-09-03T09:31:54.630626-04:00"
     },
     "BNC": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 3.3639,
       "orb_low": 2.99,
       "pdh": 3.02,
       "pct_change_seen": 17.3,
-      "first_seen": "2026-09-03T09:37:03.395561-04:00"
+      "first_seen": "2026-09-03T09:37:03.395561-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "VIDA": {
       "status": "rejected",
@@ -511,6 +512,15 @@
       "pdh": 1.26,
       "pct_change_seen": 10.4,
       "first_seen": "2026-09-03T10:20:23.021246-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "MNOV": {
+      "status": "rejected",
+      "orb15": 1.5321,
+      "orb_low": 1.45,
+      "pdh": 1.46,
+      "pct_change_seen": 10.4,
+      "first_seen": "2026-09-03T10:25:51.855633-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     }
   }
