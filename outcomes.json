@@ -339,5 +339,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "GSUN",
+    "entry_datetime": "2026-09-03T13:53:51.331913-04:00",
+    "entry_price": 0.31040000915527344,
+    "orb15": 0.25,
+    "pdh": 0.325,
+    "pct_change_seen": 36.5,
+    "stop_price": 0.2317,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2413.92,
+    "risk_amount": 12.07,
+    "shares": 153,
+    "position_value": 47.49,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T14:08:51.331913-04:00",
+      "m30": "2026-09-03T14:23:51.331913-04:00",
+      "h1": "2026-09-03T14:53:51.331913-04:00",
+      "h2": "2026-09-03T15:53:51.331913-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
