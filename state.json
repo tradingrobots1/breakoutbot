@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T10:09:21.403174-04:00",
+  "gainers_last_refresh": "2026-09-03T10:14:52.731380-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -483,6 +483,14 @@
       "pdh": 3.86,
       "pct_change_seen": 10.3,
       "first_seen": "2026-09-03T10:09:21.403174-04:00"
+    },
+    "UFG": {
+      "status": "watching",
+      "orb15": 0.6164,
+      "orb_low": 0.59,
+      "pdh": 0.589,
+      "pct_change_seen": 14.1,
+      "first_seen": "2026-09-03T10:14:52.731380-04:00"
     }
   }
 }
