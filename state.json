@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T09:52:48.873195-04:00",
+  "gainers_last_refresh": "2026-09-03T09:58:18.660993-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -396,6 +396,23 @@
       "pct_change_seen": 9.5,
       "first_seen": "2026-09-03T09:52:48.873195-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "XTIA": {
+      "status": "watching",
+      "orb15": 1.06,
+      "orb_low": 0.98,
+      "pdh": 1.14,
+      "pct_change_seen": 11.1,
+      "first_seen": "2026-09-03T09:58:18.660993-04:00"
+    },
+    "LIDR": {
+      "status": "entered",
+      "orb15": 1.48,
+      "orb_low": 1.41,
+      "pdh": 1.5,
+      "pct_change_seen": 9.4,
+      "first_seen": "2026-09-03T09:58:18.660993-04:00",
+      "entered_at": "2026-09-03T09:58:18.660993-04:00"
     }
   }
 }

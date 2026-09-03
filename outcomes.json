@@ -91,5 +91,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "LIDR",
+    "entry_datetime": "2026-09-03T09:58:24.885994-04:00",
+    "entry_price": 1.5205999612808228,
+    "orb15": 1.48,
+    "pdh": 1.5,
+    "pct_change_seen": 9.4,
+    "stop_price": 1.41,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2500.0,
+    "risk_amount": 12.5,
+    "shares": 113,
+    "position_value": 171.83,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T10:13:24.885994-04:00",
+      "m30": "2026-09-03T10:28:24.885994-04:00",
+      "h1": "2026-09-03T10:58:24.885994-04:00",
+      "h2": "2026-09-03T11:58:24.885994-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
