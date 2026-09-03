@@ -51,7 +51,7 @@
       "first_seen": "2026-09-03T09:31:54.630626-04:00"
     },
     "VAI": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 2.01,
       "orb_low": 1.915,
       "pdh": 2.08,
