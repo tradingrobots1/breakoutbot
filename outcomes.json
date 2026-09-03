@@ -308,5 +308,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "JFB",
+    "entry_datetime": "2026-09-03T12:00:08.477172-04:00",
+    "entry_price": 5.274700164794922,
+    "orb15": 5.2396,
+    "pdh": 5.39,
+    "pct_change_seen": 7.4,
+    "stop_price": 4.825,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2426.7,
+    "risk_amount": 12.13,
+    "shares": 26,
+    "position_value": 137.14,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T12:15:08.477172-04:00",
+      "m30": "2026-09-03T12:30:08.477172-04:00",
+      "h1": "2026-09-03T13:00:08.477172-04:00",
+      "h2": "2026-09-03T14:00:08.477172-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]

@@ -265,12 +265,13 @@
       "first_seen": "2026-09-03T09:37:03.395561-04:00"
     },
     "JFB": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 5.2396,
       "orb_low": 4.825,
       "pdh": 5.39,
       "pct_change_seen": 7.4,
-      "first_seen": "2026-09-03T09:37:03.395561-04:00"
+      "first_seen": "2026-09-03T09:37:03.395561-04:00",
+      "entered_at": "2026-09-03T12:00:02.499740-04:00"
     },
     "DFNS": {
       "status": "watching",
