@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+*.log
+*.log.*
+outcomes.lock
+.env
+backtest_results.json
+backtest_compare_results.json

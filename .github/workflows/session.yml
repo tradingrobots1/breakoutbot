@@ -1,0 +1,56 @@
+name: Breakoutbot Session
+
+on:
+  schedule:
+    # 9:25 ET = 13:25 UTC en horario de verano (EDT, UTC-4).
+    # En horario de invierno (EST, UTC-5) equivale a 14:25 UTC -- revisar/
+    # ajustar en los cambios de hora de EE.UU. (el bucle interno SÍ es
+    # DST-safe, usa TZ=America/New_York vía tzdata del runner; solo este
+    # disparador en UTC no lo es, igual que en pumpfader).
+    - cron: '25 13 * * 1-5'
+  workflow_dispatch:
+
+concurrency:
+  group: breakoutbot-session
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  session:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Bucle de sesión (breakout scanner cada ~75s)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          git config user.name "breakoutbot"
+          git config user.email "actions@github.com"
+          END_ET="15:15"
+          while true; do
+            NOW_ET=$(TZ='America/New_York' date +%H:%M)
+            if [[ "$NOW_ET" > "$END_ET" ]]; then
+              echo "Fin de ventana de sesión ($NOW_ET ET >= $END_ET ET) -- deteniendo bucle"
+              break
+            fi
+            python3 breakout_scanner.py --telegram || echo "iteración falló, se reintenta en la siguiente pasada"
+            if ! git diff --quiet -- state.json outcomes.json 2>/dev/null; then
+              git add state.json outcomes.json
+              git commit -m "chore: actualizar estado de sesión ($NOW_ET ET)" || true
+              git pull --rebase origin main
+              git push
+            fi
+            sleep 75
+          done

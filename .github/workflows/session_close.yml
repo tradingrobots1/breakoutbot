@@ -1,0 +1,61 @@
+name: Breakoutbot Session Close
+
+on:
+  schedule:
+    # 15:58 ET = 19:58 UTC en horario de verano (EDT). En invierno (EST)
+    # equivale a 20:58 UTC -- revisar/ajustar en los cambios de hora.
+    # Se dispara ANTES del cierre (16:00 ET) para poder hacer una última
+    # pasada del scanner mientras el mercado sigue abierto (breakouts
+    # tardíos entre el fin del bucle de session.yml a las 15:15 ET y el
+    # cierre), y luego espera al cierre real para resolver el checkpoint
+    # "close" con outcome_tracker.py.
+    - cron: '58 19 * * 1-5'
+  workflow_dispatch:
+
+concurrency:
+  group: breakoutbot-session
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Última pasada del scanner (breakouts tardíos, aún en horario)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 breakout_scanner.py --telegram
+
+      - name: Esperar al cierre de sesión (16:00 ET)
+        run: |
+          while [[ "$(TZ='America/New_York' date +%H:%M)" < "16:01" ]]; do
+            sleep 15
+          done
+
+      - name: Resolver checkpoints (incluye el de cierre de sesión)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 outcome_tracker.py --telegram
+
+      - name: Guardar estado actualizado
+        run: |
+          git config user.name "breakoutbot"
+          git config user.email "actions@github.com"
+          git add state.json outcomes.json
+          git diff --staged --quiet || git commit -m "chore: cierre de sesión (checkpoints + posibles breakouts tardíos)"
+          git pull --rebase origin main
+          git push

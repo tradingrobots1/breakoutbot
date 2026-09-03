@@ -1,0 +1,39 @@
+name: Breakoutbot Export Excel
+
+on:
+  schedule:
+    # 21:55 CEST = 19:55 UTC en verano europeo; ajustar en cambios de hora.
+    - cron: '55 19 * * 1-5'
+  workflow_dispatch:
+
+concurrency:
+  group: breakoutbot-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Generar Excel
+        run: python3 export_outcomes_excel.py
+
+      - name: Guardar Excel actualizado
+        run: |
+          git config user.name "breakoutbot"
+          git config user.email "actions@github.com"
+          git add docs/Breakoutbot_Outcomes.xlsx
+          git diff --staged --quiet || git commit -m "chore: actualizar Excel de outcomes"
+          git pull --rebase origin main
+          git push
