@@ -7,7 +7,10 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: breakoutbot-state
+  # mismo grupo que session.yml/session_close.yml -- evita que este
+  # workflow (cron a las 15:55 ET) corra en paralelo con el cierre de
+  # sesión (arranca a las 15:58 ET) y compitan haciendo git push a la vez
+  group: breakoutbot-session
   cancel-in-progress: false
 
 permissions:
