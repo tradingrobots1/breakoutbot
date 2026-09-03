@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T11:15:02.258123-04:00",
+  "gainers_last_refresh": "2026-09-03T11:20:27.425204-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -51,12 +51,13 @@
       "first_seen": "2026-09-03T09:31:54.630626-04:00"
     },
     "VAI": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 2.01,
       "orb_low": 1.915,
       "pdh": 2.08,
       "pct_change_seen": -1.5,
-      "first_seen": "2026-09-03T09:31:54.630626-04:00"
+      "first_seen": "2026-09-03T09:31:54.630626-04:00",
+      "entered_at": "2026-09-03T11:20:27.425204-04:00"
     },
     "GYGY": {
       "status": "watching",
@@ -588,6 +589,24 @@
       "pdh": 0.435,
       "pct_change_seen": 12.0,
       "first_seen": "2026-09-03T11:09:35.183154-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "SLSN": {
+      "status": "rejected",
+      "orb15": 0.89,
+      "orb_low": 0.89,
+      "pdh": 0.94,
+      "pct_change_seen": 12.7,
+      "first_seen": "2026-09-03T11:20:27.425204-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "BLNK": {
+      "status": "rejected",
+      "orb15": 0.555,
+      "orb_low": 0.5298,
+      "pdh": 0.523,
+      "pct_change_seen": 11.8,
+      "first_seen": "2026-09-03T11:20:27.425204-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     }
   }
