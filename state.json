@@ -483,12 +483,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "DLTH": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 4.28,
       "orb_low": 4.01,
       "pdh": 3.86,
       "pct_change_seen": 10.3,
-      "first_seen": "2026-09-03T10:09:21.403174-04:00"
+      "first_seen": "2026-09-03T10:09:21.403174-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "UFG": {
       "status": "rejected",
