@@ -123,6 +123,15 @@ def orb_window_complete(dt: datetime) -> bool:
 
 # ─────────────────────────────────────────────────────────────────
 # MÓDULO: GAINERS DEL DÍA (Yahoo Finance screener)
+#
+# LIMITACIÓN CONOCIDA (aceptada, no arreglable con datos gratuitos):
+# yf.screen() no es una base de datos completa en tiempo real — es el
+# índice parcial/cacheado que usa la propia web de Yahoo, con huecos de
+# cobertura reales en microcaps poco líquidas. Verificado: NCPL subió
+# +30% el 2 sep 2026 y cumplía todos los filtros (cap $8.08M, exchange
+# NCM) pero nunca apareció en el screener ese día. No hay arreglo
+# gratuito — requeriría un screener de pago (Polygon, IEX, etc.) con
+# cobertura garantizada.
 # ─────────────────────────────────────────────────────────────────
 def get_today_gainers() -> list[dict]:
     q = yf.EquityQuery("and", [
