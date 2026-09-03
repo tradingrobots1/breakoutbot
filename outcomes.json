@@ -246,5 +246,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": true
+  },
+  {
+    "ticker": "MPU",
+    "entry_datetime": "2026-09-03T11:42:23.399410-04:00",
+    "entry_price": 0.19910000264644623,
+    "orb15": 0.19,
+    "pdh": 0.2,
+    "pct_change_seen": 12.4,
+    "stop_price": 0.1826,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2442.97,
+    "risk_amount": 12.21,
+    "shares": 739,
+    "position_value": 147.13,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T11:57:23.399410-04:00",
+      "m30": "2026-09-03T12:12:23.399410-04:00",
+      "h1": "2026-09-03T12:42:23.399410-04:00",
+      "h2": "2026-09-03T13:42:23.399410-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
