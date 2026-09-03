@@ -46,11 +46,11 @@
     "shares": 259,
     "position_value": 71.38,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 39.26,
+      "m30": 39.26,
+      "h1": 39.26,
+      "h2": 39.26,
+      "close": 39.26
     },
     "checkpoint_times": {
       "m15": "2026-09-03T10:07:56.039392-04:00",
@@ -59,7 +59,7 @@
       "h2": "2026-09-03T11:52:56.039392-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "SOAR",
@@ -263,11 +263,11 @@
     "shares": 739,
     "position_value": 147.13,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -8.29,
+      "m30": -8.29,
+      "h1": -8.29,
+      "h2": -8.29,
+      "close": -8.29
     },
     "checkpoint_times": {
       "m15": "2026-09-03T11:57:23.399410-04:00",
@@ -276,7 +276,7 @@
       "h2": "2026-09-03T13:42:23.399410-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "PRHI",
@@ -294,11 +294,11 @@
     "shares": 11,
     "position_value": 79.54,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 4.41,
+      "m30": 4.41,
+      "h1": 4.41,
+      "h2": 4.41,
+      "close": 4.41
     },
     "checkpoint_times": {
       "m15": "2026-09-03T12:02:50.269496-04:00",
@@ -307,7 +307,7 @@
       "h2": "2026-09-03T13:47:50.269496-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "JFB",
@@ -325,11 +325,11 @@
     "shares": 26,
     "position_value": 137.14,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -6.25,
+      "m30": -6.25,
+      "h1": -6.25,
+      "h2": -6.25,
+      "close": -6.25
     },
     "checkpoint_times": {
       "m15": "2026-09-03T12:15:08.477172-04:00",
@@ -338,7 +338,7 @@
       "h2": "2026-09-03T14:00:08.477172-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GSUN",
@@ -356,11 +356,11 @@
     "shares": 153,
     "position_value": 47.49,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -18.04,
+      "m30": -18.04,
+      "h1": -18.04,
+      "h2": -18.04,
+      "close": -18.04
     },
     "checkpoint_times": {
       "m15": "2026-09-03T14:08:51.331913-04:00",
@@ -369,6 +369,6 @@
       "h2": "2026-09-03T15:53:51.331913-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   }
 ]
