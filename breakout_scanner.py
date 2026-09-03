@@ -98,6 +98,9 @@ class Config:
     market_open: str = "09:30"
     orb_end: str = "09:45"
     market_close: str = "16:00"
+    orb_data_giveup_minutes: int = 30  # dejar de reintentar ORB15 si un
+                                        # ticker nunca devuelve velas de 5m
+                                        # (delistados, sin liquidez, etc.)
     checkpoint_minutes: dict = field(
         default_factory=lambda: {"m15": 15, "m30": 30, "h1": 60, "h2": 120}
     )
@@ -575,6 +578,18 @@ def run_once(send_tg: bool = False):
         if entry.get("orb15") is None:
             orb_window = get_orb_window(ticker)
             if orb_window is None:
+                # Algunos tickers muy ilíquidos nunca devuelven velas de 5m
+                # aunque sí tengan datos diarios (visto en producción: 544
+                # llamadas desperdiciadas en un solo día, en 6 tickers,
+                # reintentando algo que no iba a funcionar nunca) — tras
+                # cfg.orb_data_giveup_minutes sin éxito, se descarta en vez
+                # de seguir insistiendo el resto de la sesión.
+                first_seen = datetime.fromisoformat(entry["first_seen"])
+                if (now - first_seen) > timedelta(minutes=cfg.orb_data_giveup_minutes):
+                    entry["status"] = "rejected"
+                    entry["rejected_reason"] = "sin_datos_intradia"
+                    log.warning(f"[MAIN] {ticker}: sin velas de 5m disponibles tras "
+                                f"{cfg.orb_data_giveup_minutes} min — se descarta")
                 continue
             entry["orb15"], entry["orb_low"] = orb_window
         bar = get_latest_completed_close(ticker)
