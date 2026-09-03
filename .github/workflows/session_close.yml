@@ -51,6 +51,12 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python3 outcome_tracker.py --telegram
 
+      - name: Recap de fin de día (ganadoras vs. perdedoras)
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 outcome_tracker.py --telegram --recap
+
       - name: Guardar estado actualizado
         run: |
           git config user.name "breakoutbot"

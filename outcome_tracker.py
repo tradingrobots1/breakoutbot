@@ -11,6 +11,11 @@ Uso:
   python3 outcome_tracker.py                # rellena checkpoints vencidos
   python3 outcome_tracker.py --telegram      # + manda resumen de entradas
                                                 recién completadas (close)
+  python3 outcome_tracker.py --telegram --recap   # recap de fin de día:
+                                                     todas las entradas de
+                                                     hoy con su retorno a
+                                                     cierre, ganadoras vs.
+                                                     perdedoras
 """
 
 import os
@@ -21,12 +26,15 @@ import json
 from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 import yfinance as yf
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=Path(__file__).parent / ".env", override=True)
+
+ET = ZoneInfo("America/New_York")
 
 logger = logging.getLogger("outcome_tracker")
 logger.setLevel(logging.DEBUG)
@@ -174,6 +182,65 @@ def build_completion_message(completed: list[dict]) -> str:
     return "\n\n".join(lines)
 
 
+def build_recap_message(outcomes: list[dict]) -> str:
+    """Recap de fin de día: todas las entradas registradas HOY (fecha ET),
+    con su retorno a cierre si ya está resuelto, y el agregado ganadoras/
+    perdedoras. Pensado para lanzarse justo después de resolver los
+    checkpoints de cierre (session_close.yml) — así el checkpoint 'close'
+    de las entradas de hoy ya está disponible."""
+    today_et = datetime.now(ET).strftime("%Y-%m-%d")
+    today_entries = [o for o in outcomes if o["entry_datetime"][:10] == today_et]
+
+    lines = [f"📋 *Breakoutbot — Recap del día* · {today_et}\n"]
+    if not today_entries:
+        lines.append("_Sin breakouts hoy._")
+        return "\n".join(lines)
+
+    closed_returns = []
+    for o in sorted(today_entries, key=lambda x: x["entry_datetime"]):
+        close_val = o["checkpoints"].get("close")
+        entry_time = o["entry_datetime"][11:16]
+        if isinstance(close_val, (int, float)):
+            closed_returns.append(close_val)
+            tag = "🟢" if close_val > 0 else "🔴"
+            ret_str = f"{tag} {close_val:+.1f}%"
+        elif close_val == "N/A":
+            ret_str = "⚪ N/A (sin precio disponible)"
+        else:
+            ret_str = "⏳ pendiente (cierre aún no resuelto)"
+        pdh_line = f" · PDH ${fmt_price(o['pdh'])}" if o.get("pdh") else ""
+        lines.append(
+            f"*{o['ticker']}* · entrada ${fmt_price(o['entry_price'])} ({entry_time} ET){pdh_line}\n"
+            f"  Retorno a cierre: {ret_str}"
+        )
+
+    if closed_returns:
+        wins = sum(1 for v in closed_returns if v > 0)
+        losses = sum(1 for v in closed_returns if v <= 0)
+        avg = sum(closed_returns) / len(closed_returns)
+        win_rate = 100 * wins / len(closed_returns)
+        lines.append(
+            f"📊 *{wins} ganadora(s) / {losses} perdedora(s)* · win-rate {win_rate:.0f}% "
+            f"· retorno medio a cierre: {avg:+.1f}%"
+        )
+
+    return "\n\n".join(lines)
+
+
+def run_recap(send_tg: bool = True):
+    logger.info("=" * 60)
+    logger.info("BREAKOUTBOT — Recap de fin de día")
+    logger.info("=" * 60)
+    outcomes = load_outcomes()
+    msg = build_recap_message(outcomes)
+    logger.info(f"[RECAP] {msg}")
+    if send_tg:
+        if send_telegram(msg):
+            logger.info("[TELEGRAM] Recap enviado")
+    else:
+        print(msg)
+
+
 def run(send_tg: bool = False):
     logger.info("=" * 60)
     logger.info("BREAKOUTBOT — Outcome Tracker")
@@ -213,5 +280,10 @@ def run(send_tg: bool = False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--telegram", action="store_true", help="Enviar resumen por Telegram")
+    parser.add_argument("--recap", action="store_true",
+                         help="Recap de fin de día (no resuelve checkpoints, solo resume las entradas de hoy)")
     args = parser.parse_args()
-    run(send_tg=args.telegram)
+    if args.recap:
+        run_recap(send_tg=args.telegram)
+    else:
+        run(send_tg=args.telegram)
