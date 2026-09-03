@@ -184,5 +184,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "BTCT",
+    "entry_datetime": "2026-09-03T10:45:09.078299-04:00",
+    "entry_price": 1.9709999561309814,
+    "orb15": 1.95,
+    "pdh": 2.03,
+    "pct_change_seen": 9.7,
+    "stop_price": 1.84,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2472.44,
+    "risk_amount": 12.36,
+    "shares": 94,
+    "position_value": 185.27,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T11:00:09.078299-04:00",
+      "m30": "2026-09-03T11:15:09.078299-04:00",
+      "h1": "2026-09-03T11:45:09.078299-04:00",
+      "h2": "2026-09-03T12:45:09.078299-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
