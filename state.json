@@ -410,7 +410,7 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "LIDR": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 1.48,
       "orb_low": 1.41,
       "pdh": 1.5,
