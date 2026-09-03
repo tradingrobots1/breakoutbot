@@ -332,12 +332,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "LHSW": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 4.09,
       "orb_low": 3.775,
       "pdh": 4.15,
       "pct_change_seen": 10.2,
-      "first_seen": "2026-09-03T09:47:22.648822-04:00"
+      "first_seen": "2026-09-03T09:47:22.648822-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "AVX": {
       "status": "watching",
