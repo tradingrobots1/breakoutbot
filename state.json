@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T10:42:19.291985-04:00",
+  "gainers_last_refresh": "2026-09-03T10:47:47.571028-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -231,7 +231,7 @@
       "first_seen": "2026-09-03T09:37:03.395561-04:00"
     },
     "ALAR": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 1.3377,
       "orb_low": 1.3,
       "pdh": 1.53,

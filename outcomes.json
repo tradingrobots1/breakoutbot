@@ -162,19 +162,19 @@
     "pdh": 1.53,
     "pct_change_seen": 11.3,
     "stop_price": 1.3,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 1.2999999523162842,
+    "stop_exit_time": "2026-09-03T10:47:47.571028-04:00",
     "account_equity_at_entry": 2487.27,
     "risk_amount": 12.44,
     "shares": 355,
     "position_value": 473.93,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -2.62,
+      "m30": -2.62,
+      "h1": -2.62,
+      "h2": -2.62,
+      "close": -2.62
     },
     "checkpoint_times": {
       "m15": "2026-09-03T10:31:22.884801-04:00",
@@ -183,7 +183,7 @@
       "h2": "2026-09-03T12:16:22.884801-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BTCT",
