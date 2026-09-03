@@ -13,7 +13,10 @@
 ║  Simula una compra en el momento del breakout y registra la       ║
 ║  entrada en outcomes.json para que outcome_tracker.py mida el     ║
 ║  resultado real con el tiempo (checkpoints de                     ║
-║  15min/30min/1h/2h/cierre de sesión).                             ║
+║  15min/30min/1h/2h/cierre de sesión). Cada pasada también vigila  ║
+║  las posiciones ya abiertas y las cierra por stop-loss en cuanto  ║
+║  el precio rompe el mínimo del ORB15 — no espera al siguiente     ║
+║  checkpoint fijo para protegerlas.                                ║
 ║                                                                    ║
 ║  Pensado para ejecutarse en pasadas cortas y repetidas (cada      ║
 ║  ~60-90s) durante la sesión — cada invocación es una pasada única ║
@@ -152,10 +155,12 @@ def get_today_gainers() -> list[dict]:
 # ─────────────────────────────────────────────────────────────────
 # MÓDULO: PRECIOS — ORB15, PDH, última vela 5m completada, precio en vivo
 # ─────────────────────────────────────────────────────────────────
-def get_orb15(ticker: str) -> float | None:
-    """Máximo de las velas de 5m entre market_open y orb_end (primeros 15
-    minutos de sesión) — solo tiene sentido llamarla una vez esa ventana
-    ha cerrado del todo (orb_window_complete)."""
+def get_orb_window(ticker: str) -> tuple[float, float] | None:
+    """(orb_high, orb_low) de las velas de 5m entre market_open y orb_end
+    (primeros 15 minutos de sesión) — solo tiene sentido llamarla una vez
+    esa ventana ha cerrado del todo (orb_window_complete). orb_low se usa
+    como nivel de stop-loss: si el precio vuelve a caer por debajo del
+    mínimo de la apertura, la tesis del breakout queda invalidada."""
     try:
         df = yf.Ticker(ticker).history(period="1d", interval="5m")
     except Exception as e:
@@ -167,7 +172,7 @@ def get_orb15(ticker: str) -> float | None:
     window = df.between_time(cfg.market_open, cfg.orb_end, inclusive="left")
     if window.empty:
         return None
-    return round(float(window["High"].max()), 4)
+    return round(float(window["High"].max()), 4), round(float(window["Low"].min()), 4)
 
 
 def get_pdh(ticker: str) -> float | None:
@@ -291,13 +296,52 @@ def record_outcome_entry(t: dict) -> None:
             "orb15": t["orb15"],
             "pdh": t.get("pdh"),  # siempre intacto en este punto — ver filtro en run_once()
             "pct_change_seen": t.get("pct_change_seen"),
+            "stop_price": t.get("orb_low"),  # stop-loss = mínimo del ORB15
+            "stopped_out": False,
+            "stop_exit_price": None,
+            "stop_exit_time": None,
             "checkpoints": {k: None for k in list(cfg.checkpoint_minutes.keys()) + ["close"]},
             "checkpoint_times": checkpoint_times,
             "resolved": False,
         })
         _save_outcomes(outcomes)
     log.info(f"[OUTCOMES] {t['ticker']} registrado — entrada ${_fmt_price(t['entry_price'])} "
-              f"a las {entry_dt.strftime('%H:%M:%S')} ET")
+              f"a las {entry_dt.strftime('%H:%M:%S')} ET"
+              + (f" · stop-loss ${_fmt_price(t['orb_low'])}" if t.get("orb_low") else " · SIN stop-loss (no se pudo calcular el mínimo del ORB15)"))
+
+
+def apply_stop_loss(ticker: str, exit_price: float, now: datetime) -> float | None:
+    """Marca la entrada abierta de `ticker` como cerrada por stop-loss:
+    rellena TODOS los checkpoints pendientes con el retorno del stop (una
+    vez vendida la posición, el retorno en cualquier checkpoint posterior
+    ya es ese, no depende de cómo siga moviéndose el precio). Devuelve el
+    retorno % del stop, o None si no había ninguna entrada abierta hoy
+    para ese ticker (no debería pasar, pero por si acaso)."""
+    with _outcomes_lock():
+        outcomes = _load_outcomes()
+        today_str = now.strftime("%Y-%m-%d")
+        target = None
+        for o in outcomes:
+            if (o["ticker"] == ticker and o["entry_datetime"][:10] == today_str
+                    and not o.get("stopped_out") and not o.get("resolved")):
+                target = o
+        if target is None:
+            log.warning(f"[STOP-LOSS] {ticker}: no se encontró una entrada abierta de hoy en outcomes.json")
+            return None
+
+        entry_price = target["entry_price"]
+        stop_return = round((exit_price - entry_price) / entry_price * 100, 2)
+        target["stopped_out"] = True
+        target["stop_exit_price"] = exit_price
+        target["stop_exit_time"] = now.isoformat()
+        for key in target["checkpoints"]:
+            if target["checkpoints"][key] is None:
+                target["checkpoints"][key] = stop_return
+        target["resolved"] = all(v is not None for v in target["checkpoints"].values())
+        _save_outcomes(outcomes)
+
+    log.info(f"[STOP-LOSS] {ticker} vendido a ${_fmt_price(exit_price)} — retorno {stop_return:+.1f}%")
+    return stop_return
 
 
 # ─────────────────────────────────────────────────────────────────
@@ -366,12 +410,27 @@ def build_breakout_alert(entries: list[dict]) -> str:
         # descartado la señal) — se muestra como dato de "recorrido libre"
         # hasta la siguiente resistencia obvia, no como confirmación.
         pdh_line = f"\n  PDH intacto: ${_fmt_price(t['pdh'])} (todavía por delante)" if t.get("pdh") else ""
+        stop_line = (f"\n  🛑 Stop-loss: ${_fmt_price(t['orb_low'])} (mínimo del ORB15)"
+                     if t.get("orb_low") else "\n  ⚠️ Sin stop-loss (no se pudo calcular el mínimo del ORB15)")
         pct = t.get("pct_change_seen")
         pct_line = f" ({pct:+.1f}% hoy)" if pct is not None else ""
         lines.append(
             f"*{t['ticker']}*{pct_line} rompe ORB15 (${_fmt_price(t['orb15'])}) "
             f"→ entrada simulada ${_fmt_price(t['entry_price'])}"
             f"{pdh_line}"
+            f"{stop_line}"
+        )
+    return "\n\n".join(lines)
+
+
+def build_stop_loss_alert(stopped: list[dict]) -> str:
+    today = now_et().strftime("%Y-%m-%d %H:%M")
+    lines = [f"🛑 *Breakoutbot — Stop-loss disparado* · {today} ET\n"]
+    for s in stopped:
+        lines.append(
+            f"*{s['ticker']}* vendida a ${_fmt_price(s['exit_price'])} "
+            f"(rompió el mínimo del ORB15, ${_fmt_price(s['stop_price'])}) "
+            f"→ retorno {s['stop_return']:+.1f}%"
         )
     return "\n\n".join(lines)
 
@@ -407,7 +466,7 @@ def run_once(send_tg: bool = False):
             t = g["ticker"]
             if t not in state["tickers"]:
                 state["tickers"][t] = {
-                    "status": "watching", "orb15": None, "pdh": None,
+                    "status": "watching", "orb15": None, "orb_low": None, "pdh": None,
                     "pct_change_seen": g["pct_change"], "first_seen": now.isoformat(),
                 }
         state["gainers_last_refresh"] = now.isoformat()
@@ -426,9 +485,10 @@ def run_once(send_tg: bool = False):
         if not orb_ready:
             continue  # ORB15 aún no se puede calcular (ventana 9:30-9:45 sin cerrar)
         if entry.get("orb15") is None:
-            entry["orb15"] = get_orb15(ticker)
-            if entry["orb15"] is None:
+            orb_window = get_orb_window(ticker)
+            if orb_window is None:
                 continue
+            entry["orb15"], entry["orb_low"] = orb_window
         bar = get_latest_completed_close(ticker)
         if bar is None:
             continue
@@ -463,9 +523,31 @@ def run_once(send_tg: bool = False):
         entry["entered_at"] = now.isoformat()
         new_entries.append({
             "ticker": ticker, "entry_price": live_price, "orb15": entry["orb15"],
-            "pdh": pdh, "pct_change_seen": entry.get("pct_change_seen"),
+            "orb_low": entry.get("orb_low"), "pdh": pdh, "pct_change_seen": entry.get("pct_change_seen"),
             "bar_close": close_price, "bar_time": bar_time.isoformat(),
         })
+        time.sleep(0.2)
+
+    # Vigilancia de stop-loss — posiciones ya "entered" se comprueban en
+    # CADA pasada (no solo en los checkpoints fijos de outcome_tracker.py),
+    # para poder salir en cuanto el precio rompe el mínimo del ORB15, no
+    # solo cuando toque la hora del siguiente checkpoint.
+    stopped = []
+    entered_tickers = [t for t, e in state["tickers"].items() if e["status"] == "entered"]
+    for ticker in entered_tickers:
+        entry = state["tickers"][ticker]
+        stop_price = entry.get("orb_low")
+        if stop_price is None:
+            continue  # sin nivel de stop calculado — no se puede proteger esta posición
+        live_price = get_live_price(ticker)
+        if live_price is None:
+            continue
+        if live_price <= stop_price:
+            stop_return = apply_stop_loss(ticker, live_price, now)
+            if stop_return is not None:
+                entry["status"] = "stopped"
+                stopped.append({"ticker": ticker, "exit_price": live_price,
+                                 "stop_price": stop_price, "stop_return": stop_return})
         time.sleep(0.2)
 
     _save_state(state)
@@ -478,8 +560,14 @@ def run_once(send_tg: bool = False):
         if send_tg:
             if send_telegram(build_breakout_alert(new_entries)):
                 log.info("[TELEGRAM] Alerta de breakout enviada")
-    else:
-        log.info("[MAIN] Sin breakouts nuevos en esta pasada")
+    if stopped:
+        log.info(f"[MAIN] {len(stopped)} stop-loss disparado(s): " +
+                  ", ".join(f"{s['ticker']} ({s['stop_return']:+.1f}%)" for s in stopped))
+        if send_tg:
+            if send_telegram(build_stop_loss_alert(stopped)):
+                log.info("[TELEGRAM] Alerta de stop-loss enviada")
+    if not new_entries and not stopped:
+        log.info("[MAIN] Sin breakouts nuevos ni stops disparados en esta pasada")
 
 
 if __name__ == "__main__":

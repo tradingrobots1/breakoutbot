@@ -33,8 +33,8 @@ def main():
     ws = wb.active
     ws.title = "Outcomes"
 
-    headers = ["Ticker", "Fecha/hora entrada", "Precio entrada", "ORB15", "PDH (intacto)",
-               "% hoy al detectar", "m15 (%)", "m30 (%)", "h1 (%)", "h2 (%)", "close (%)", "Resuelto"]
+    headers = ["Ticker", "Fecha/hora entrada", "Precio entrada", "ORB15", "PDH (intacto)", "Stop-loss",
+               "% hoy al detectar", "m15 (%)", "m30 (%)", "h1 (%)", "h2 (%)", "close (%)", "Parada por stop", "Resuelto"]
     ws.append(headers)
     header_fill = PatternFill(start_color="1a1a1a", end_color="1a1a1a", fill_type="solid")
     for col, h in enumerate(headers, 1):
@@ -51,12 +51,14 @@ def main():
             round(o["entry_price"], 4),
             round(o["orb15"], 4) if o.get("orb15") else "",
             round(o["pdh"], 4) if o.get("pdh") else "",
+            round(o["stop_price"], 4) if o.get("stop_price") else "",
             o.get("pct_change_seen", ""),
             fmt_pct(cps.get("m15")),
             fmt_pct(cps.get("m30")),
             fmt_pct(cps.get("h1")),
             fmt_pct(cps.get("h2")),
             fmt_pct(cps.get("close")),
+            "Sí" if o.get("stopped_out") else "No",
             "Sí" if o["resolved"] else "No",
         ]
         ws.append(row)
@@ -64,12 +66,12 @@ def main():
     # colorear positivos en verde, negativos en rojo (retorno long: + = gana)
     green = Font(color="1e7d34")
     red = Font(color="c0392b")
-    for row in ws.iter_rows(min_row=2, min_col=7, max_col=11):
+    for row in ws.iter_rows(min_row=2, min_col=8, max_col=12):
         for cell in row:
             if isinstance(cell.value, (int, float)):
                 cell.font = green if cell.value > 0 else red
 
-    widths = [10, 17, 13, 10, 13, 15, 9, 9, 9, 9, 9, 10]
+    widths = [10, 17, 13, 10, 13, 11, 15, 9, 9, 9, 9, 9, 11, 10]
     for i, w in enumerate(widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
 

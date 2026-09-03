@@ -174,10 +174,11 @@ def build_completion_message(completed: list[dict]) -> str:
         cps = " · ".join(f"{k}: {v:+.1f}%" if isinstance(v, (int, float)) else f"{k}: {v}"
                          for k, v in o["checkpoints"].items())
         pdh_line = f" · PDH: ${fmt_price(o['pdh'])}" if o.get("pdh") else ""
+        stop_line = f"\n  🛑 Cerrada por stop-loss a ${fmt_price(o['stop_exit_price'])}" if o.get("stopped_out") else ""
         lines.append(
             f"*{o['ticker']}* · entrada ${fmt_price(o['entry_price'])} el {o['entry_datetime'][:16].replace('T', ' ')}\n"
             f"  ORB15: ${fmt_price(o['orb15'])}{pdh_line}\n"
-            f"  Retorno: {cps}"
+            f"  Retorno: {cps}{stop_line}"
         )
     return "\n\n".join(lines)
 
@@ -209,8 +210,9 @@ def build_recap_message(outcomes: list[dict]) -> str:
         else:
             ret_str = "⏳ pendiente (cierre aún no resuelto)"
         pdh_line = f" · PDH ${fmt_price(o['pdh'])}" if o.get("pdh") else ""
+        stop_tag = " 🛑" if o.get("stopped_out") else ""
         lines.append(
-            f"*{o['ticker']}* · entrada ${fmt_price(o['entry_price'])} ({entry_time} ET){pdh_line}\n"
+            f"*{o['ticker']}*{stop_tag} · entrada ${fmt_price(o['entry_price'])} ({entry_time} ET){pdh_line}\n"
             f"  Retorno a cierre: {ret_str}"
         )
 
