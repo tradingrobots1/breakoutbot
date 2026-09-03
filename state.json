@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "gainers_last_refresh": "2026-09-03T11:25:54.190312-04:00",
+  "gainers_last_refresh": "2026-09-03T11:31:19.912985-04:00",
   "tickers": {
     "MIMI": {
       "status": "watching",
@@ -607,6 +607,15 @@
       "pdh": 0.523,
       "pct_change_seen": 11.8,
       "first_seen": "2026-09-03T11:20:27.425204-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "CHOW": {
+      "status": "rejected",
+      "orb15": 0.451,
+      "orb_low": 0.4434,
+      "pdh": 0.494,
+      "pct_change_seen": 12.5,
+      "first_seen": "2026-09-03T11:31:19.912985-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     }
   }
