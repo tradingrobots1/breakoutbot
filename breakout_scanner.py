@@ -650,7 +650,7 @@ def run_once(send_tg: bool = False):
 
     # Resolver cada breakout candidato: record_outcome_entry() calcula el
     # tamaño de posición por riesgo (equity actual × risk_per_trade_pct) y
-    # devuelve False si sale a 0 acciones (distancia al stop demasiado
+    # devuelve None si sale a 0 acciones (distancia al stop demasiado
     # grande para el riesgo permitido) — esas se marcan "rejected", no
     # "entered", y no generan alerta de entrada.
     confirmed_entries = []
