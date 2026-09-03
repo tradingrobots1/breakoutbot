@@ -436,22 +436,29 @@ def run_once(send_tg: bool = False):
         if close_price <= entry["orb15"]:
             continue
 
-        # Breakout confirmado — precio de entrada en vivo (más preciso que
-        # el cierre de la vela, que puede tener varios minutos de retraso).
-        live_price = get_live_price(ticker) or close_price
         pdh = entry.get("pdh")
 
         # Filtro validado por backtest (8 semanas, 145 señales): si el PDH
         # ya estaba roto ANTES de esta ruptura de ORB15, el precio llega
         # más "extendido" y rinde mucho peor (+0.6%/51% win a cierre) que
         # cuando el PDH sigue intacto (+6.0%/79% win) — se descarta.
-        if pdh and live_price > pdh:
+        # OJO: la comprobación usa close_price (el cierre de la misma vela
+        # que confirma el breakout), no un precio en vivo posterior — es
+        # EXACTAMENTE la misma definición de "pdh_confirmed" que usó el
+        # backtest (backtest_breakout.py). Comparar contra un precio más
+        # tardío (fast_info, potencialmente minutos después) mediría una
+        # condición distinta a la que de verdad se validó.
+        if pdh and close_price > pdh:
             entry["status"] = "rejected"
             entry["rejected_reason"] = "orb15_break_pero_pdh_ya_roto"
             log.info(f"[MAIN] {ticker} rompe ORB15 (${_fmt_price(entry['orb15'])}) pero ya había roto "
                       f"el PDH (${_fmt_price(pdh)}) — se descarta (peor rendimiento en backtest)")
             continue
 
+        # Breakout confirmado — precio de entrada en vivo (más preciso que
+        # el cierre de la vela para el precio de ENTRADA en sí, aunque la
+        # condición de disparo arriba use el cierre de la vela).
+        live_price = get_live_price(ticker) or close_price
         entry["status"] = "entered"
         entry["entered_at"] = now.isoformat()
         new_entries.append({

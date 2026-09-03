@@ -46,8 +46,12 @@ jobs:
               break
             fi
             python3 breakout_scanner.py --telegram || echo "iteración falló, se reintenta en la siguiente pasada"
-            if ! git diff --quiet -- state.json outcomes.json 2>/dev/null; then
-              git add state.json outcomes.json
+            # git add SIEMPRE primero -- git diff (sin --staged) no detecta
+            # archivos nuevos sin trackear (la primera vez que se crea
+            # state.json/outcomes.json en el repo), así que comprobar el
+            # diff ANTES de git add se saltaría el commit inicial entero.
+            git add state.json outcomes.json 2>/dev/null
+            if ! git diff --staged --quiet; then
               git commit -m "chore: actualizar estado de sesión ($NOW_ET ET)" || true
               git pull --rebase origin main
               git push

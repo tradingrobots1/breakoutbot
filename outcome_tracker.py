@@ -168,7 +168,7 @@ def update_checkpoints(outcomes: list[dict]) -> list[dict]:
 
 
 def build_completion_message(completed: list[dict]) -> str:
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(ET).strftime("%Y-%m-%d")
     lines = [f"📈 *Breakoutbot — Resultado de señales* · {today}\n"]
     for o in completed:
         cps = " · ".join(f"{k}: {v:+.1f}%" if isinstance(v, (int, float)) else f"{k}: {v}"
