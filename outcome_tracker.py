@@ -58,6 +58,19 @@ STALE_CHECKPOINT_GIVEUP_HOURS = 48  # si lleva vencido más de esto sin poder
                                      # obtener precio, se marca "N/A" en vez
                                      # de reintentar para siempre (ticker
                                      # deslistado, sin liquidez, etc.)
+STARTING_CAPITAL = 2500.0  # debe coincidir con cfg.starting_capital de breakout_scanner.py
+
+
+def get_current_equity(outcomes: list[dict]) -> float:
+    """Mismo cálculo que breakout_scanner.py: capital inicial + P&L $
+    realizado de las entradas ya resueltas (cierre normal o stop-loss)."""
+    equity = STARTING_CAPITAL
+    for o in outcomes:
+        if o.get("resolved") and o.get("position_value"):
+            close_pct = o["checkpoints"].get("close")
+            if isinstance(close_pct, (int, float)):
+                equity += o["position_value"] * close_pct / 100
+    return equity
 
 
 @contextmanager
@@ -175,10 +188,13 @@ def build_completion_message(completed: list[dict]) -> str:
                          for k, v in o["checkpoints"].items())
         pdh_line = f" · PDH: ${fmt_price(o['pdh'])}" if o.get("pdh") else ""
         stop_line = f"\n  🛑 Cerrada por stop-loss a ${fmt_price(o['stop_exit_price'])}" if o.get("stopped_out") else ""
+        close_pct = o["checkpoints"].get("close")
+        pnl_line = (f"\n  💵 {o['shares']} acciones · P&L ${o['position_value']*close_pct/100:+,.2f}"
+                    if o.get("position_value") and isinstance(close_pct, (int, float)) else "")
         lines.append(
             f"*{o['ticker']}* · entrada ${fmt_price(o['entry_price'])} el {o['entry_datetime'][:16].replace('T', ' ')}\n"
             f"  ORB15: ${fmt_price(o['orb15'])}{pdh_line}\n"
-            f"  Retorno: {cps}{stop_line}"
+            f"  Retorno: {cps}{stop_line}{pnl_line}"
         )
     return "\n\n".join(lines)
 
@@ -198,13 +214,19 @@ def build_recap_message(outcomes: list[dict]) -> str:
         return "\n".join(lines)
 
     closed_returns = []
+    dollar_pnls = []
     for o in sorted(today_entries, key=lambda x: x["entry_datetime"]):
         close_val = o["checkpoints"].get("close")
         entry_time = o["entry_datetime"][11:16]
+        pnl_str = ""
         if isinstance(close_val, (int, float)):
             closed_returns.append(close_val)
             tag = "🟢" if close_val > 0 else "🔴"
             ret_str = f"{tag} {close_val:+.1f}%"
+            if o.get("position_value"):
+                dollar_pnl = round(o["position_value"] * close_val / 100, 2)
+                dollar_pnls.append(dollar_pnl)
+                pnl_str = f" (${dollar_pnl:+,.2f})"
         elif close_val == "N/A":
             ret_str = "⚪ N/A (sin precio disponible)"
         else:
@@ -213,7 +235,7 @@ def build_recap_message(outcomes: list[dict]) -> str:
         stop_tag = " 🛑" if o.get("stopped_out") else ""
         lines.append(
             f"*{o['ticker']}*{stop_tag} · entrada ${fmt_price(o['entry_price'])} ({entry_time} ET){pdh_line}\n"
-            f"  Retorno a cierre: {ret_str}"
+            f"  Retorno a cierre: {ret_str}{pnl_str}"
         )
 
     if closed_returns:
@@ -221,9 +243,12 @@ def build_recap_message(outcomes: list[dict]) -> str:
         losses = sum(1 for v in closed_returns if v <= 0)
         avg = sum(closed_returns) / len(closed_returns)
         win_rate = 100 * wins / len(closed_returns)
+        equity = get_current_equity(outcomes)
+        pnl_total_line = f" · P&L del día: ${sum(dollar_pnls):+,.2f}" if dollar_pnls else ""
         lines.append(
             f"📊 *{wins} ganadora(s) / {losses} perdedora(s)* · win-rate {win_rate:.0f}% "
-            f"· retorno medio a cierre: {avg:+.1f}%"
+            f"· retorno medio a cierre: {avg:+.1f}%{pnl_total_line}\n"
+            f"💰 Equity: ${equity:,.2f} (capital inicial ${STARTING_CAPITAL:,.2f})"
         )
 
     return "\n\n".join(lines)

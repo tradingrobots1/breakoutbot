@@ -16,7 +16,11 @@
 ║  15min/30min/1h/2h/cierre de sesión). Cada pasada también vigila  ║
 ║  las posiciones ya abiertas y las cierra por stop-loss en cuanto  ║
 ║  el precio rompe el mínimo del ORB15 — no espera al siguiente     ║
-║  checkpoint fijo para protegerlas.                                ║
+║  checkpoint fijo para protegerlas. El tamaño de cada posición se  ║
+║  calcula por riesgo (no un importe fijo igual para todas): cada   ║
+║  trade arriesga como mucho risk_per_trade_pct% de la cuenta si    ║
+║  salta el stop — sin stop calculable no hay tamaño protegido, y   ║
+║  la señal se descarta.                                            ║
 ║                                                                    ║
 ║  Pensado para ejecutarse en pasadas cortas y repetidas (cada      ║
 ║  ~60-90s) durante la sesión — cada invocación es una pasada única ║
@@ -97,6 +101,15 @@ class Config:
     checkpoint_minutes: dict = field(
         default_factory=lambda: {"m15": 15, "m30": 30, "h1": 60, "h2": 120}
     )
+    # Position sizing por riesgo — cada trade arriesga como mucho
+    # risk_per_trade_pct% de la cuenta SI SALTA EL STOP, no un importe fijo
+    # igual para todos. Con distancias de stop tan distintas entre tickers
+    # (visto en el backtest: desde ~1% hasta ~14% bajo la entrada), un
+    # importe fijo por trade arriesgaría cantidades muy distintas sin
+    # querer. Sin stop calculable no hay forma de tamañar con riesgo
+    # conocido, así que esas señales se descartan (ver run_once()).
+    starting_capital: float = 2500.0
+    risk_per_trade_pct: float = 0.5
 
 
 cfg = Config()
@@ -287,7 +300,30 @@ def _save_outcomes(outcomes: list[dict]) -> None:
     OUTCOMES_FILE.write_text(json.dumps(outcomes, indent=2, default=str), encoding="utf-8")
 
 
-def record_outcome_entry(t: dict) -> None:
+def get_current_equity(outcomes: list[dict]) -> float:
+    """Capital inicial + P&L $ realizado de todas las entradas YA
+    resueltas (cierre normal o stop-loss) — las que siguen abiertas no
+    cuentan (mark-to-market no se contempla, solo P&L cerrado). Se usa
+    para tamañar la SIGUIENTE entrada por riesgo, no las que ya están
+    en marcha (esas ya quedaron tamañadas con la equity que había en
+    su momento)."""
+    equity = cfg.starting_capital
+    for o in outcomes:
+        if o.get("resolved") and o.get("position_value"):
+            close_pct = o["checkpoints"].get("close")
+            if isinstance(close_pct, (int, float)):
+                equity += o["position_value"] * close_pct / 100
+    return equity
+
+
+def record_outcome_entry(t: dict) -> dict | None:
+    """Registra la entrada con el tamaño de posición calculado por riesgo
+    (no un importe fijo igual para todas): shares = riesgo_$ / distancia
+    al stop, donde riesgo_$ = equity_actual * risk_per_trade_pct. Si esa
+    cuenta sale a 0 acciones (distancia al stop demasiado grande para el
+    riesgo permitido en esta cuenta), NO se registra la entrada — sin
+    tamaño protegido no hay trade. Devuelve el sizing calculado (para la
+    alerta de Telegram) o None si se descartó por tamaño 0."""
     entry_dt = now_et()
     close_dt = entry_dt.replace(hour=16, minute=0, second=0, microsecond=0)
     if close_dt <= entry_dt:
@@ -296,8 +332,20 @@ def record_outcome_entry(t: dict) -> None:
                          for k, m in cfg.checkpoint_minutes.items()}
     checkpoint_times["close"] = close_dt.isoformat()
 
+    stop_price = t["orb_low"]  # run_once() ya garantiza que existe antes de llegar aquí
+    stop_distance = t["entry_price"] - stop_price
+
     with _outcomes_lock():
         outcomes = _load_outcomes()
+        equity = get_current_equity(outcomes)
+        risk_amount = round(equity * cfg.risk_per_trade_pct / 100, 2)
+        shares = int(risk_amount / stop_distance) if stop_distance > 0 else 0
+        if shares <= 0:
+            log.warning(f"[OUTCOMES] {t['ticker']}: distancia al stop (${stop_distance:.4f}) demasiado "
+                        f"grande para el riesgo permitido (${risk_amount:.2f} de ${equity:.2f}) — 0 acciones, se descarta")
+            return None
+        position_value = round(shares * t["entry_price"], 2)
+
         outcomes.append({
             "ticker": t["ticker"],
             "entry_datetime": entry_dt.isoformat(),
@@ -305,27 +353,33 @@ def record_outcome_entry(t: dict) -> None:
             "orb15": t["orb15"],
             "pdh": t.get("pdh"),  # siempre intacto en este punto — ver filtro en run_once()
             "pct_change_seen": t.get("pct_change_seen"),
-            "stop_price": t.get("orb_low"),  # stop-loss = mínimo del ORB15
+            "stop_price": stop_price,  # stop-loss = mínimo del ORB15
             "stopped_out": False,
             "stop_exit_price": None,
             "stop_exit_time": None,
+            "account_equity_at_entry": round(equity, 2),
+            "risk_amount": risk_amount,
+            "shares": shares,
+            "position_value": position_value,
             "checkpoints": {k: None for k in list(cfg.checkpoint_minutes.keys()) + ["close"]},
             "checkpoint_times": checkpoint_times,
             "resolved": False,
         })
         _save_outcomes(outcomes)
-    log.info(f"[OUTCOMES] {t['ticker']} registrado — entrada ${_fmt_price(t['entry_price'])} "
-              f"a las {entry_dt.strftime('%H:%M:%S')} ET"
-              + (f" · stop-loss ${_fmt_price(t['orb_low'])}" if t.get("orb_low") else " · SIN stop-loss (no se pudo calcular el mínimo del ORB15)"))
+    log.info(f"[OUTCOMES] {t['ticker']} registrado — {shares} acciones × ${_fmt_price(t['entry_price'])} "
+              f"(${position_value:,.2f}) a las {entry_dt.strftime('%H:%M:%S')} ET · "
+              f"riesgo ${risk_amount:.2f} · stop ${_fmt_price(stop_price)} · equity ${equity:,.2f}")
+    return {"shares": shares, "risk_amount": risk_amount, "position_value": position_value,
+            "account_equity_at_entry": round(equity, 2)}
 
 
-def apply_stop_loss(ticker: str, exit_price: float, now: datetime) -> float | None:
+def apply_stop_loss(ticker: str, exit_price: float, now: datetime) -> dict | None:
     """Marca la entrada abierta de `ticker` como cerrada por stop-loss:
     rellena TODOS los checkpoints pendientes con el retorno del stop (una
     vez vendida la posición, el retorno en cualquier checkpoint posterior
-    ya es ese, no depende de cómo siga moviéndose el precio). Devuelve el
-    retorno % del stop, o None si no había ninguna entrada abierta hoy
-    para ese ticker (no debería pasar, pero por si acaso)."""
+    ya es ese, no depende de cómo siga moviéndose el precio). Devuelve
+    {'stop_return', 'dollar_pnl'}, o None si no había ninguna entrada
+    abierta hoy para ese ticker (no debería pasar, pero por si acaso)."""
     with _outcomes_lock():
         outcomes = _load_outcomes()
         today_str = now.strftime("%Y-%m-%d")
@@ -340,6 +394,8 @@ def apply_stop_loss(ticker: str, exit_price: float, now: datetime) -> float | No
 
         entry_price = target["entry_price"]
         stop_return = round((exit_price - entry_price) / entry_price * 100, 2)
+        position_value = target.get("position_value")
+        dollar_pnl = round(position_value * stop_return / 100, 2) if position_value else None
         target["stopped_out"] = True
         target["stop_exit_price"] = exit_price
         target["stop_exit_time"] = now.isoformat()
@@ -349,8 +405,9 @@ def apply_stop_loss(ticker: str, exit_price: float, now: datetime) -> float | No
         target["resolved"] = all(v is not None for v in target["checkpoints"].values())
         _save_outcomes(outcomes)
 
-    log.info(f"[STOP-LOSS] {ticker} vendido a ${_fmt_price(exit_price)} — retorno {stop_return:+.1f}%")
-    return stop_return
+    log.info(f"[STOP-LOSS] {ticker} vendido a ${_fmt_price(exit_price)} — retorno {stop_return:+.1f}%"
+              + (f" (${dollar_pnl:+,.2f})" if dollar_pnl is not None else ""))
+    return {"stop_return": stop_return, "dollar_pnl": dollar_pnl}
 
 
 # ─────────────────────────────────────────────────────────────────
@@ -419,8 +476,10 @@ def build_breakout_alert(entries: list[dict]) -> str:
         # descartado la señal) — se muestra como dato de "recorrido libre"
         # hasta la siguiente resistencia obvia, no como confirmación.
         pdh_line = f"\n  PDH intacto: ${_fmt_price(t['pdh'])} (todavía por delante)" if t.get("pdh") else ""
-        stop_line = (f"\n  🛑 Stop-loss: ${_fmt_price(t['orb_low'])} (mínimo del ORB15)"
-                     if t.get("orb_low") else "\n  ⚠️ Sin stop-loss (no se pudo calcular el mínimo del ORB15)")
+        stop_line = f"\n  🛑 Stop-loss: ${_fmt_price(t['orb_low'])} (mínimo del ORB15)"
+        size_line = (f"\n  📐 {t['shares']} acciones (${t['position_value']:,.2f}) · "
+                     f"riesgo ${t['risk_amount']:.2f} · equity ${t['account_equity_at_entry']:,.2f}"
+                     if t.get("shares") else "")
         pct = t.get("pct_change_seen")
         pct_line = f" ({pct:+.1f}% hoy)" if pct is not None else ""
         lines.append(
@@ -428,6 +487,7 @@ def build_breakout_alert(entries: list[dict]) -> str:
             f"→ entrada simulada ${_fmt_price(t['entry_price'])}"
             f"{pdh_line}"
             f"{stop_line}"
+            f"{size_line}"
         )
     return "\n\n".join(lines)
 
@@ -436,10 +496,11 @@ def build_stop_loss_alert(stopped: list[dict]) -> str:
     today = now_et().strftime("%Y-%m-%d %H:%M")
     lines = [f"🛑 *Breakoutbot — Stop-loss disparado* · {today} ET\n"]
     for s in stopped:
+        pnl_line = f" (${s['dollar_pnl']:+,.2f})" if s.get("dollar_pnl") is not None else ""
         lines.append(
             f"*{s['ticker']}* vendida a ${_fmt_price(s['exit_price'])} "
             f"(rompió el mínimo del ORB15, ${_fmt_price(s['stop_price'])}) "
-            f"→ retorno {s['stop_return']:+.1f}%"
+            f"→ retorno {s['stop_return']:+.1f}%{pnl_line}"
         )
     return "\n\n".join(lines)
 
@@ -524,12 +585,22 @@ def run_once(send_tg: bool = False):
                       f"el PDH (${_fmt_price(pdh)}) — se descarta (peor rendimiento en backtest)")
             continue
 
+        # Sin mínimo del ORB15 no hay forma de tamañar la posición por
+        # riesgo conocido — sin stop calculable, no se protege la cuenta,
+        # así que no se toma la señal (se descarta, no solo se avisa).
+        if entry.get("orb_low") is None:
+            entry["status"] = "rejected"
+            entry["rejected_reason"] = "sin_stop_calculable"
+            log.warning(f"[MAIN] {ticker} rompe ORB15 pero no se pudo calcular el mínimo del ORB15 "
+                        f"(sin stop-loss no se puede proteger la posición) — se descarta")
+            continue
+
         # Breakout confirmado — precio de entrada en vivo (más preciso que
         # el cierre de la vela para el precio de ENTRADA en sí, aunque la
-        # condición de disparo arriba use el cierre de la vela).
+        # condición de disparo arriba use el cierre de la vela). El estado
+        # final ("entered" o "rejected" por tamaño 0) se decide más abajo,
+        # tras calcular el sizing por riesgo en record_outcome_entry().
         live_price = get_live_price(ticker) or close_price
-        entry["status"] = "entered"
-        entry["entered_at"] = now.isoformat()
         new_entries.append({
             "ticker": ticker, "entry_price": live_price, "orb15": entry["orb15"],
             "orb_low": entry.get("orb_low"), "pdh": pdh, "pct_change_seen": entry.get("pct_change_seen"),
@@ -552,22 +623,36 @@ def run_once(send_tg: bool = False):
         if live_price is None:
             continue
         if live_price <= stop_price:
-            stop_return = apply_stop_loss(ticker, live_price, now)
-            if stop_return is not None:
+            result = apply_stop_loss(ticker, live_price, now)
+            if result is not None:
                 entry["status"] = "stopped"
-                stopped.append({"ticker": ticker, "exit_price": live_price,
-                                 "stop_price": stop_price, "stop_return": stop_return})
+                stopped.append({"ticker": ticker, "exit_price": live_price, "stop_price": stop_price,
+                                 "stop_return": result["stop_return"], "dollar_pnl": result["dollar_pnl"]})
         time.sleep(0.2)
+
+    # Resolver cada breakout candidato: record_outcome_entry() calcula el
+    # tamaño de posición por riesgo (equity actual × risk_per_trade_pct) y
+    # devuelve False si sale a 0 acciones (distancia al stop demasiado
+    # grande para el riesgo permitido) — esas se marcan "rejected", no
+    # "entered", y no generan alerta de entrada.
+    confirmed_entries = []
+    for t in new_entries:
+        sizing = record_outcome_entry(t)
+        if sizing is not None:
+            confirmed_entries.append({**t, **sizing})
+            state["tickers"][t["ticker"]]["status"] = "entered"
+            state["tickers"][t["ticker"]]["entered_at"] = now.isoformat()
+        else:
+            state["tickers"][t["ticker"]]["status"] = "rejected"
+            state["tickers"][t["ticker"]]["rejected_reason"] = "position_too_small"
 
     _save_state(state)
 
-    if new_entries:
-        for t in new_entries:
-            record_outcome_entry(t)
-        log.info(f"[MAIN] {len(new_entries)} breakout(s) nuevo(s): " +
-                  ", ".join(t["ticker"] for t in new_entries))
+    if confirmed_entries:
+        log.info(f"[MAIN] {len(confirmed_entries)} breakout(s) nuevo(s): " +
+                  ", ".join(t["ticker"] for t in confirmed_entries))
         if send_tg:
-            if send_telegram(build_breakout_alert(new_entries)):
+            if send_telegram(build_breakout_alert(confirmed_entries)):
                 log.info("[TELEGRAM] Alerta de breakout enviada")
     if stopped:
         log.info(f"[MAIN] {len(stopped)} stop-loss disparado(s): " +
@@ -575,7 +660,7 @@ def run_once(send_tg: bool = False):
         if send_tg:
             if send_telegram(build_stop_loss_alert(stopped)):
                 log.info("[TELEGRAM] Alerta de stop-loss enviada")
-    if not new_entries and not stopped:
+    if not confirmed_entries and not stopped:
         log.info("[MAIN] Sin breakouts nuevos ni stops disparados en esta pasada")
 
 
