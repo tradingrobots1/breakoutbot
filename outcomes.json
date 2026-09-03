@@ -60,5 +60,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "SOAR",
+    "entry_datetime": "2026-09-03T09:55:40.412655-04:00",
+    "entry_price": 0.2533999979496002,
+    "orb15": 0.2519,
+    "pdh": 0.253,
+    "pct_change_seen": 10.4,
+    "stop_price": 0.233,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2500.0,
+    "risk_amount": 12.5,
+    "shares": 612,
+    "position_value": 155.08,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T10:10:40.412655-04:00",
+      "m30": "2026-09-03T10:25:40.412655-04:00",
+      "h1": "2026-09-03T10:55:40.412655-04:00",
+      "h2": "2026-09-03T11:55:40.412655-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]

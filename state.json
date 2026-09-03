@@ -67,12 +67,13 @@
       "first_seen": "2026-09-03T09:31:54.630626-04:00"
     },
     "SVRN": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 10.0,
       "orb_low": 9.72,
       "pdh": 10.5,
       "pct_change_seen": -7.0,
-      "first_seen": "2026-09-03T09:31:54.630626-04:00"
+      "first_seen": "2026-09-03T09:31:54.630626-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "SPWR": {
       "status": "rejected",
@@ -212,12 +213,13 @@
       "first_seen": "2026-09-03T09:37:03.395561-04:00"
     },
     "VIDA": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 2.93,
       "orb_low": 2.65,
       "pdh": 2.64,
       "pct_change_seen": 15.7,
-      "first_seen": "2026-09-03T09:37:03.395561-04:00"
+      "first_seen": "2026-09-03T09:37:03.395561-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "EVTL": {
       "status": "watching",
@@ -351,12 +353,13 @@
       "first_seen": "2026-09-03T09:47:22.648822-04:00"
     },
     "PTLE": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 8.05,
       "orb_low": 7.0,
       "pdh": 7.9,
       "pct_change_seen": 16.4,
-      "first_seen": "2026-09-03T09:52:48.873195-04:00"
+      "first_seen": "2026-09-03T09:52:48.873195-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "TANH": {
       "status": "entered",
@@ -377,12 +380,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "SOAR": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 0.2519,
       "orb_low": 0.233,
       "pdh": 0.253,
       "pct_change_seen": 10.4,
-      "first_seen": "2026-09-03T09:52:48.873195-04:00"
+      "first_seen": "2026-09-03T09:52:48.873195-04:00",
+      "entered_at": "2026-09-03T09:55:34.476551-04:00"
     },
     "AVAT": {
       "status": "rejected",
