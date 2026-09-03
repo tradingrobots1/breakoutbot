@@ -323,12 +323,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "TELA": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 0.83,
       "orb_low": 0.75,
       "pdh": 0.83,
       "pct_change_seen": 10.3,
-      "first_seen": "2026-09-03T09:47:22.648822-04:00"
+      "first_seen": "2026-09-03T09:47:22.648822-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "LHSW": {
       "status": "watching",
