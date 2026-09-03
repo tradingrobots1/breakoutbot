@@ -277,5 +277,36 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "PRHI",
+    "entry_datetime": "2026-09-03T11:47:50.269496-04:00",
+    "entry_price": 7.230999946594238,
+    "orb15": 6.2905,
+    "pdh": 7.72,
+    "pct_change_seen": 12.1,
+    "stop_price": 6.185,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2442.97,
+    "risk_amount": 12.21,
+    "shares": 11,
+    "position_value": 79.54,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-03T12:02:50.269496-04:00",
+      "m30": "2026-09-03T12:17:50.269496-04:00",
+      "h1": "2026-09-03T12:47:50.269496-04:00",
+      "h2": "2026-09-03T13:47:50.269496-04:00",
+      "close": "2026-09-03T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
