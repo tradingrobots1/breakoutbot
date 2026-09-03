@@ -7,19 +7,19 @@
     "pdh": 1.55,
     "pct_change_seen": 9.6,
     "stop_price": 1.34,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 1.3380000591278076,
+    "stop_exit_time": "2026-09-03T10:10:46.002451-04:00",
     "account_equity_at_entry": 2500.0,
     "risk_amount": 12.5,
     "shares": 152,
     "position_value": 216.1,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -5.89,
+      "m30": -5.89,
+      "h1": -5.89,
+      "h2": -5.89,
+      "close": -5.89
     },
     "checkpoint_times": {
       "m15": "2026-09-03T10:05:11.244926-04:00",
@@ -28,7 +28,7 @@
       "h2": "2026-09-03T11:50:11.244926-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "TANH",

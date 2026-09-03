@@ -278,7 +278,7 @@
       "first_seen": "2026-09-03T09:42:08.219344-04:00"
     },
     "ACTU": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 1.4599,
       "orb_low": 1.34,
       "pdh": 1.55,
@@ -398,12 +398,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "XTIA": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 1.06,
       "orb_low": 0.98,
       "pdh": 1.14,
       "pct_change_seen": 11.1,
-      "first_seen": "2026-09-03T09:58:18.660993-04:00"
+      "first_seen": "2026-09-03T09:58:18.660993-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "LIDR": {
       "status": "entered",
