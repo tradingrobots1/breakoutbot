@@ -50,7 +50,15 @@ jobs:
             # archivos nuevos sin trackear (la primera vez que se crea
             # state.json/outcomes.json en el repo), así que comprobar el
             # diff ANTES de git add se saltaría el commit inicial entero.
-            git add state.json outcomes.json 2>/dev/null
+            # OJO: si los archivos ni siquiera EXISTEN aún (mercado cerrado
+            # en la primera pasada, breakout_scanner.py sale antes de crear
+            # nada), "git add" falla con código de salida != 0 -- el step
+            # corre en bash -e (para en el primer error), así que sin
+            # "|| true" aquí, esa primera pasada mata el bucle entero al
+            # instante (fallo real visto en un run de prueba: exit 128,
+            # el bucle nunca llegó a la segunda iteración). 2>/dev/null
+            # solo esconde el mensaje, no el código de salida.
+            git add state.json outcomes.json 2>/dev/null || true
             if ! git diff --staged --quiet; then
               git commit -m "chore: actualizar estado de sesión ($NOW_ET ET)" || true
               git pull --rebase origin main
