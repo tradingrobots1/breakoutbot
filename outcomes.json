@@ -193,19 +193,19 @@
     "pdh": 2.03,
     "pct_change_seen": 9.7,
     "stop_price": 1.84,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 1.8350000381469727,
+    "stop_exit_time": "2026-09-03T13:29:11.952424-04:00",
     "account_equity_at_entry": 2472.44,
     "risk_amount": 12.36,
     "shares": 94,
     "position_value": 185.27,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -6.9,
+      "m30": -6.9,
+      "h1": -6.9,
+      "h2": -6.9,
+      "close": -6.9
     },
     "checkpoint_times": {
       "m15": "2026-09-03T11:00:09.078299-04:00",
@@ -214,7 +214,7 @@
       "h2": "2026-09-03T12:45:09.078299-04:00",
       "close": "2026-09-03T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "VAI",
