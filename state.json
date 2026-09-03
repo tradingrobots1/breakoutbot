@@ -387,7 +387,7 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "SOAR": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 0.2519,
       "orb_low": 0.233,
       "pdh": 0.253,
