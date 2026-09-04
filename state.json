@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T10:41:38.787408-04:00",
+  "gainers_last_refresh": "2026-09-04T10:47:10.050364-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -827,6 +827,32 @@
       "pct_change_seen": 8.9,
       "first_seen": "2026-09-04T10:41:38.787408-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "MIRA": {
+      "status": "entered",
+      "orb15": 0.7571,
+      "orb_low": 0.7571,
+      "pdh": 0.84,
+      "pct_change_seen": 3.0,
+      "first_seen": "2026-09-04T10:47:10.050364-04:00",
+      "entered_at": "2026-09-04T10:47:10.050364-04:00"
+    },
+    "SMX": {
+      "status": "rejected",
+      "orb15": 17.7372,
+      "orb_low": 17.605,
+      "pdh": 17.75,
+      "pct_change_seen": 4.2,
+      "first_seen": "2026-09-04T10:47:10.050364-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "ATGL": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 6.0,
+      "pct_change_seen": 9.1,
+      "first_seen": "2026-09-04T10:47:10.050364-04:00"
     }
   }
 }

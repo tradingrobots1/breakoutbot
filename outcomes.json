@@ -928,5 +928,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "MIRA",
+    "entry_datetime": "2026-09-04T10:47:18.071075-04:00",
+    "entry_price": 0.7738999724388123,
+    "orb15": 0.7571,
+    "pdh": 0.84,
+    "pct_change_seen": 3.0,
+    "stop_price": 0.7571,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2326.16,
+    "risk_amount": 11.63,
+    "shares": 692,
+    "position_value": 535.54,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T11:02:18.071075-04:00",
+      "m30": "2026-09-04T11:17:18.071075-04:00",
+      "h1": "2026-09-04T11:47:18.071075-04:00",
+      "h2": "2026-09-04T12:47:18.071075-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
