@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T14:34:40.917694-04:00",
+  "gainers_last_refresh": "2026-09-04T14:40:16.030054-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -1121,6 +1121,15 @@
       "pdh": 1.47,
       "pct_change_seen": 9.2,
       "first_seen": "2026-09-04T14:34:40.917694-04:00"
+    },
+    "GRNQ": {
+      "status": "rejected",
+      "orb15": 15.0,
+      "orb_low": 15.0,
+      "pdh": 15.91,
+      "pct_change_seen": 9.0,
+      "first_seen": "2026-09-04T14:40:16.030054-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     }
   }
 }
