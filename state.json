@@ -851,12 +851,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "ATGL": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 6.0,
       "pct_change_seen": 9.1,
-      "first_seen": "2026-09-04T10:47:10.050364-04:00"
+      "first_seen": "2026-09-04T10:47:10.050364-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "MOBX": {
       "status": "rejected",
