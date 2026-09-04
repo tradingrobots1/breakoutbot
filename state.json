@@ -626,7 +626,7 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "NRSN": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 0.4105,
       "orb_low": 0.4,
       "pdh": 0.449,

@@ -627,19 +627,19 @@
     "pdh": 0.449,
     "pct_change_seen": 10.8,
     "stop_price": 0.4,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 0.38100001215934753,
+    "stop_exit_time": "2026-09-04T11:16:23.623316-04:00",
     "account_equity_at_entry": 2339.17,
     "risk_amount": 11.7,
     "shares": 260,
     "position_value": 115.7,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -14.38,
+      "m30": -14.38,
+      "h1": -14.38,
+      "h2": -14.38,
+      "close": -14.38
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:18:17.751738-04:00",
@@ -648,7 +648,7 @@
       "h2": "2026-09-04T12:03:17.751738-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "SPWR",
