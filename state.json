@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T10:47:10.050364-04:00",
+  "gainers_last_refresh": "2026-09-04T10:52:44.313072-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -854,6 +854,33 @@
       "pdh": 6.0,
       "pct_change_seen": 9.1,
       "first_seen": "2026-09-04T10:47:10.050364-04:00"
+    },
+    "MOBX": {
+      "status": "rejected",
+      "orb15": 1.07,
+      "orb_low": 1.0061,
+      "pdh": 1.12,
+      "pct_change_seen": 7.3,
+      "first_seen": "2026-09-04T10:52:44.313072-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "CLGN": {
+      "status": "rejected",
+      "orb15": 3.36,
+      "orb_low": 3.01,
+      "pdh": 3.656,
+      "pct_change_seen": 11.4,
+      "first_seen": "2026-09-04T10:52:44.313072-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "PMVP": {
+      "status": "rejected",
+      "orb15": 1.27,
+      "orb_low": 1.24,
+      "pdh": 1.289,
+      "pct_change_seen": 7.7,
+      "first_seen": "2026-09-04T10:52:44.313072-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     }
   }
 }
