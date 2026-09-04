@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T11:53:31.877503-04:00",
+  "gainers_last_refresh": "2026-09-04T11:59:04.097106-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -977,6 +977,23 @@
       "pct_change_seen": 8.7,
       "first_seen": "2026-09-04T11:53:31.877503-04:00",
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "CURX": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 5.019,
+      "pct_change_seen": 9.7,
+      "first_seen": "2026-09-04T11:59:04.097106-04:00"
+    },
+    "MBRX": {
+      "status": "entered",
+      "orb15": 0.6949,
+      "orb_low": 0.68,
+      "pdh": 0.73,
+      "pct_change_seen": 9.1,
+      "first_seen": "2026-09-04T11:59:04.097106-04:00",
+      "entered_at": "2026-09-04T11:59:04.097106-04:00"
     }
   }
 }
