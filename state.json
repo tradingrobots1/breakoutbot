@@ -1116,12 +1116,13 @@
       "rejected_reason": "sin_datos_intradia"
     },
     "KWM": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.47,
       "pct_change_seen": 9.2,
-      "first_seen": "2026-09-04T14:34:40.917694-04:00"
+      "first_seen": "2026-09-04T14:34:40.917694-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "GRNQ": {
       "status": "rejected",
