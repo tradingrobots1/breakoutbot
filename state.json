@@ -925,12 +925,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "GIBO": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 32.0,
       "pct_change_seen": 6.6,
-      "first_seen": "2026-09-04T11:26:01.519529-04:00"
+      "first_seen": "2026-09-04T11:26:01.519529-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "UCL": {
       "status": "rejected",
