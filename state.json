@@ -46,7 +46,7 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "ZOOZ": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 7.91,
       "orb_low": 7.84,
       "pdh": 8.265,

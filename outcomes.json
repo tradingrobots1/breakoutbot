@@ -720,19 +720,19 @@
     "pdh": 8.265,
     "pct_change_seen": -0.8,
     "stop_price": 7.84,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 7.800000190734863,
+    "stop_exit_time": "2026-09-04T11:13:35.608996-04:00",
     "account_equity_at_entry": 2339.17,
     "risk_amount": 11.7,
     "shares": 32,
     "position_value": 262.4,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -4.88,
+      "m30": -4.88,
+      "h1": -4.88,
+      "h2": -4.88,
+      "close": -4.88
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:40:13.226507-04:00",
@@ -741,7 +741,7 @@
       "h2": "2026-09-04T12:25:13.226507-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "TREO",
