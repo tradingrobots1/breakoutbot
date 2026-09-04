@@ -711,5 +711,129 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "ZOOZ",
+    "entry_datetime": "2026-09-04T10:25:13.226507-04:00",
+    "entry_price": 8.199899673461914,
+    "orb15": 7.91,
+    "pdh": 8.265,
+    "pct_change_seen": -0.8,
+    "stop_price": 7.84,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 32,
+    "position_value": 262.4,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:40:13.226507-04:00",
+      "m30": "2026-09-04T10:55:13.226507-04:00",
+      "h1": "2026-09-04T11:25:13.226507-04:00",
+      "h2": "2026-09-04T12:25:13.226507-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "TREO",
+    "entry_datetime": "2026-09-04T10:25:13.228208-04:00",
+    "entry_price": 5.119999885559082,
+    "orb15": 5.05,
+    "pdh": 5.28,
+    "pct_change_seen": 6.3,
+    "stop_price": 5.05,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 167,
+    "position_value": 855.04,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:40:13.228208-04:00",
+      "m30": "2026-09-04T10:55:13.228208-04:00",
+      "h1": "2026-09-04T11:25:13.228208-04:00",
+      "h2": "2026-09-04T12:25:13.228208-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "EJH",
+    "entry_datetime": "2026-09-04T10:25:13.229381-04:00",
+    "entry_price": 1.2617000341415405,
+    "orb15": 1.2,
+    "pdh": 1.31,
+    "pct_change_seen": 0.0,
+    "stop_price": 1.16,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 115,
+    "position_value": 145.1,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:40:13.229381-04:00",
+      "m30": "2026-09-04T10:55:13.229381-04:00",
+      "h1": "2026-09-04T11:25:13.229381-04:00",
+      "h2": "2026-09-04T12:25:13.229381-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "MF",
+    "entry_datetime": "2026-09-04T10:25:13.230672-04:00",
+    "entry_price": 11.800000190734863,
+    "orb15": 10.8,
+    "pdh": 13.17,
+    "pct_change_seen": 9.4,
+    "stop_price": 10.8,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 11,
+    "position_value": 129.8,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:40:13.230672-04:00",
+      "m30": "2026-09-04T10:55:13.230672-04:00",
+      "h1": "2026-09-04T11:25:13.230672-04:00",
+      "h2": "2026-09-04T12:25:13.230672-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
