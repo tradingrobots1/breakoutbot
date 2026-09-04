@@ -658,19 +658,19 @@
     "pdh": 0.455,
     "pct_change_seen": -11.7,
     "stop_price": 0.3437,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 0.3409999907016754,
+    "stop_exit_time": "2026-09-04T10:54:08.730796-04:00",
     "account_equity_at_entry": 2339.17,
     "risk_amount": 11.7,
     "shares": 434,
     "position_value": 160.84,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -7.99,
+      "m30": -7.99,
+      "h1": -7.99,
+      "h2": -7.99,
+      "close": -7.99
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:21:02.609053-04:00",
@@ -679,7 +679,7 @@
       "h2": "2026-09-04T12:06:02.609053-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NDRA",
