@@ -649,5 +649,67 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "SPWR",
+    "entry_datetime": "2026-09-04T10:06:02.609053-04:00",
+    "entry_price": 0.37059998512268066,
+    "orb15": 0.3655,
+    "pdh": 0.455,
+    "pct_change_seen": -11.7,
+    "stop_price": 0.3437,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 434,
+    "position_value": 160.84,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:21:02.609053-04:00",
+      "m30": "2026-09-04T10:36:02.609053-04:00",
+      "h1": "2026-09-04T11:06:02.609053-04:00",
+      "h2": "2026-09-04T12:06:02.609053-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "NDRA",
+    "entry_datetime": "2026-09-04T10:06:02.610713-04:00",
+    "entry_price": 6.050000190734863,
+    "orb15": 5.88,
+    "pdh": 6.45,
+    "pct_change_seen": 7.0,
+    "stop_price": 5.7,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2339.17,
+    "risk_amount": 11.7,
+    "shares": 33,
+    "position_value": 199.65,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:21:02.610713-04:00",
+      "m30": "2026-09-04T10:36:02.610713-04:00",
+      "h1": "2026-09-04T11:06:02.610713-04:00",
+      "h2": "2026-09-04T12:06:02.610713-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
