@@ -276,12 +276,13 @@
       "rejected_reason": "sin_datos_intradia"
     },
     "CDTG": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 1.4227,
       "orb_low": 0.9139,
       "pdh": 0.947,
       "pct_change_seen": 12.8,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "GRAN": {
       "status": "rejected",
