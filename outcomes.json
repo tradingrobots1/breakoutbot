@@ -449,11 +449,11 @@
     "shares": 27,
     "position_value": 214.11,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 1.51,
+      "m30": 1.51,
+      "h1": 1.51,
+      "h2": 1.51,
+      "close": 1.51
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:05:45.414620-04:00",
@@ -462,7 +462,7 @@
       "h2": "2026-09-04T11:50:45.414620-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GRI",
@@ -480,11 +480,11 @@
     "shares": 161,
     "position_value": 387.12,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 19.78,
+      "m30": 19.78,
+      "h1": 19.78,
+      "h2": 19.78,
+      "close": 19.78
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:05:45.415473-04:00",
@@ -493,7 +493,7 @@
       "h2": "2026-09-04T11:50:45.415473-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "ELOX",
@@ -542,11 +542,11 @@
     "shares": 64,
     "position_value": 241.6,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -1.72,
+      "m30": -1.72,
+      "h1": -1.72,
+      "h2": -1.72,
+      "close": -1.72
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:07:09.879515-04:00",
@@ -555,7 +555,7 @@
       "h2": "2026-09-04T11:52:09.879515-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "YQ",
@@ -697,11 +697,11 @@
     "shares": 33,
     "position_value": 199.65,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:21:02.610713-04:00",
@@ -710,7 +710,7 @@
       "h2": "2026-09-04T12:06:02.610713-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "ZOOZ",
@@ -790,11 +790,11 @@
     "shares": 115,
     "position_value": 145.1,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -3.31,
+      "m30": -3.31,
+      "h1": -3.31,
+      "h2": -3.31,
+      "close": -3.31
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:40:13.229381-04:00",
@@ -803,7 +803,7 @@
       "h2": "2026-09-04T12:25:13.229381-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MF",
@@ -821,11 +821,11 @@
     "shares": 11,
     "position_value": 129.8,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 1.86,
+      "m30": 1.86,
+      "h1": 1.86,
+      "h2": 1.86,
+      "close": 1.86
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:40:13.230672-04:00",
@@ -834,7 +834,7 @@
       "h2": "2026-09-04T12:25:13.230672-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "ZTG",
@@ -852,11 +852,11 @@
     "shares": 115,
     "position_value": 83.98,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 4.09,
+      "m30": 4.09,
+      "h1": 4.09,
+      "h2": 4.09,
+      "close": 4.09
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:51:12.932934-04:00",
@@ -865,7 +865,7 @@
       "h2": "2026-09-04T12:36:12.932934-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GMHS",
@@ -883,11 +883,11 @@
     "shares": 188,
     "position_value": 161.06,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -6.47,
+      "m30": -6.47,
+      "h1": -6.47,
+      "h2": -6.47,
+      "close": -6.47
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:51:12.934772-04:00",
@@ -896,7 +896,7 @@
       "h2": "2026-09-04T12:36:12.934772-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BIAF",
@@ -914,11 +914,11 @@
     "shares": 8,
     "position_value": 99.36,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 22.95,
+      "m30": 22.95,
+      "h1": 22.95,
+      "h2": 22.95,
+      "close": 22.95
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:55:21.114240-04:00",
@@ -927,7 +927,7 @@
       "h2": "2026-09-04T12:40:21.114240-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MIRA",
@@ -945,11 +945,11 @@
     "shares": 692,
     "position_value": 535.54,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -1.31,
+      "m30": -1.31,
+      "h1": -1.31,
+      "h2": -1.31,
+      "close": -1.31
     },
     "checkpoint_times": {
       "m15": "2026-09-04T11:02:18.071075-04:00",
@@ -958,7 +958,7 @@
       "h2": "2026-09-04T12:47:18.071075-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "FBGL",
@@ -976,11 +976,11 @@
     "shares": 295,
     "position_value": 117.7,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -5.56,
+      "m30": -5.56,
+      "h1": -5.56,
+      "h2": -5.56,
+      "close": -5.56
     },
     "checkpoint_times": {
       "m15": "2026-09-04T11:06:27.042355-04:00",
@@ -989,7 +989,7 @@
       "h2": "2026-09-04T12:51:27.042355-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GRML",
@@ -1007,11 +1007,11 @@
     "shares": 24,
     "position_value": 116.52,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -1.96,
+      "m30": -1.96,
+      "h1": -1.96,
+      "h2": -1.96,
+      "close": -1.96
     },
     "checkpoint_times": {
       "m15": "2026-09-04T11:19:00.223349-04:00",
@@ -1020,7 +1020,7 @@
       "h2": "2026-09-04T13:04:00.223349-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NTRB",
@@ -1038,11 +1038,11 @@
     "shares": 30,
     "position_value": 170.1,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 5.29,
+      "m30": 5.29,
+      "h1": 5.29,
+      "h2": 5.29,
+      "close": 5.29
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:00:21.125732-04:00",
@@ -1051,7 +1051,7 @@
       "h2": "2026-09-04T13:45:21.125732-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BNC",
@@ -1069,11 +1069,11 @@
     "shares": 61,
     "position_value": 213.18,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -0.13,
+      "m30": -0.13,
+      "h1": -0.13,
+      "h2": -0.13,
+      "close": -0.13
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:00:21.127851-04:00",
@@ -1082,7 +1082,7 @@
       "h2": "2026-09-04T13:45:21.127851-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NWGL",
@@ -1100,11 +1100,11 @@
     "shares": 69,
     "position_value": 78.4,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 11.77,
+      "m30": 11.77,
+      "h1": 11.77,
+      "h2": 11.77,
+      "close": 11.77
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:08:38.616042-04:00",
@@ -1113,7 +1113,7 @@
       "h2": "2026-09-04T13:53:38.616042-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MBRX",
@@ -1131,11 +1131,11 @@
     "shares": 195,
     "position_value": 143.73,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -3.69,
+      "m30": -3.69,
+      "h1": -3.69,
+      "h2": -3.69,
+      "close": -3.69
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:14:11.260736-04:00",
@@ -1144,7 +1144,7 @@
       "h2": "2026-09-04T13:59:11.260736-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "FLZH",
@@ -1162,11 +1162,11 @@
     "shares": 953,
     "position_value": 84.82,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -10.0,
+      "m30": -10.0,
+      "h1": -10.0,
+      "h2": -10.0,
+      "close": -10.0
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:18:20.499403-04:00",
@@ -1175,7 +1175,7 @@
       "h2": "2026-09-04T14:03:20.499403-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BTCS",
@@ -1193,11 +1193,11 @@
     "shares": 278,
     "position_value": 400.32,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-04T12:55:46.633031-04:00",
@@ -1206,7 +1206,7 @@
       "h2": "2026-09-04T14:40:46.633031-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "DUO",
@@ -1224,11 +1224,11 @@
     "shares": 286,
     "position_value": 165.57,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -0.5,
+      "m30": -0.5,
+      "h1": -0.5,
+      "h2": -0.5,
+      "close": -0.5
     },
     "checkpoint_times": {
       "m15": "2026-09-04T13:55:26.675511-04:00",
@@ -1237,7 +1237,7 @@
       "h2": "2026-09-04T15:40:26.675511-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "AEHL",
@@ -1255,11 +1255,11 @@
     "shares": 7,
     "position_value": 58.03,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -1.45,
+      "m30": -1.45,
+      "h1": -1.45,
+      "h2": -1.45,
+      "close": -1.45
     },
     "checkpoint_times": {
       "m15": "2026-09-04T13:59:37.722932-04:00",
@@ -1268,6 +1268,6 @@
       "h2": "2026-09-04T15:44:37.722932-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   }
 ]
