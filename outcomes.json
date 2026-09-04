@@ -525,5 +525,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "BSEM",
+    "entry_datetime": "2026-09-04T09:52:09.879515-04:00",
+    "entry_price": 3.7750000953674316,
+    "orb15": 3.699,
+    "pdh": 3.88,
+    "pct_change_seen": 4.6,
+    "stop_price": 3.59,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 64,
+    "position_value": 241.6,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:07:09.879515-04:00",
+      "m30": "2026-09-04T10:22:09.879515-04:00",
+      "h1": "2026-09-04T10:52:09.879515-04:00",
+      "h2": "2026-09-04T11:52:09.879515-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]

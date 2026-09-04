@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T09:46:37.213539-04:00",
+  "gainers_last_refresh": "2026-09-04T09:52:02.862036-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -504,6 +504,48 @@
       "pdh": 5.28,
       "pct_change_seen": 6.3,
       "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "ELTK": {
+      "status": "watching",
+      "orb15": 7.8,
+      "orb_low": 7.8,
+      "pdh": 8.14,
+      "pct_change_seen": 8.8,
+      "first_seen": "2026-09-04T09:52:02.862036-04:00"
+    },
+    "FMFC": {
+      "status": "rejected",
+      "orb15": 0.2188,
+      "orb_low": 0.2014,
+      "pdh": 0.21,
+      "pct_change_seen": 8.2,
+      "first_seen": "2026-09-04T09:52:02.862036-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "JUNS": {
+      "status": "watching",
+      "orb15": 3.57,
+      "orb_low": 3.33,
+      "pdh": 3.49,
+      "pct_change_seen": 8.3,
+      "first_seen": "2026-09-04T09:52:02.862036-04:00"
+    },
+    "SONM": {
+      "status": "watching",
+      "orb15": 3.465,
+      "orb_low": 3.2,
+      "pdh": 3.29,
+      "pct_change_seen": 7.2,
+      "first_seen": "2026-09-04T09:52:02.862036-04:00"
+    },
+    "BSEM": {
+      "status": "entered",
+      "orb15": 3.699,
+      "orb_low": 3.59,
+      "pdh": 3.88,
+      "pct_change_seen": 4.6,
+      "first_seen": "2026-09-04T09:52:02.862036-04:00",
+      "entered_at": "2026-09-04T09:52:02.862036-04:00"
     }
   }
 }
