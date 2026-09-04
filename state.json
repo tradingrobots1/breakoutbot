@@ -61,12 +61,13 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "ATER": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 0.856,
       "orb_low": 0.6719,
       "pdh": 0.67,
       "pct_change_seen": 11.6,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "GCL": {
       "status": "watching",
