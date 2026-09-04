@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T10:58:19.470587-04:00",
+  "gainers_last_refresh": "2026-09-04T11:03:52.573539-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -891,6 +891,23 @@
       "pdh": 1.21,
       "pct_change_seen": 9.9,
       "first_seen": "2026-09-04T10:58:19.470587-04:00"
+    },
+    "MTEX": {
+      "status": "watching",
+      "orb15": 8.05,
+      "orb_low": 7.395,
+      "pdh": 7.42,
+      "pct_change_seen": 11.9,
+      "first_seen": "2026-09-04T11:03:52.573539-04:00"
+    },
+    "GRML": {
+      "status": "entered",
+      "orb15": 4.63,
+      "orb_low": 4.385,
+      "pdh": 5.02,
+      "pct_change_seen": 8.4,
+      "first_seen": "2026-09-04T11:03:52.573539-04:00",
+      "entered_at": "2026-09-04T11:03:52.573539-04:00"
     }
   }
 }
