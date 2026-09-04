@@ -835,5 +835,67 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "ZTG",
+    "entry_datetime": "2026-09-04T10:36:12.932934-04:00",
+    "entry_price": 0.7303000092506409,
+    "orb15": 0.7299,
+    "pdh": 0.755,
+    "pct_change_seen": 7.3,
+    "stop_price": 0.63,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2326.16,
+    "risk_amount": 11.63,
+    "shares": 115,
+    "position_value": 83.98,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:51:12.932934-04:00",
+      "m30": "2026-09-04T11:06:12.932934-04:00",
+      "h1": "2026-09-04T11:36:12.932934-04:00",
+      "h2": "2026-09-04T12:36:12.932934-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "GMHS",
+    "entry_datetime": "2026-09-04T10:36:12.934772-04:00",
+    "entry_price": 0.8567000031471252,
+    "orb15": 0.8199,
+    "pdh": 0.9,
+    "pct_change_seen": 9.0,
+    "stop_price": 0.795,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2326.16,
+    "risk_amount": 11.63,
+    "shares": 188,
+    "position_value": 161.06,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:51:12.934772-04:00",
+      "m30": "2026-09-04T11:06:12.934772-04:00",
+      "h1": "2026-09-04T11:36:12.934772-04:00",
+      "h2": "2026-09-04T12:36:12.934772-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
