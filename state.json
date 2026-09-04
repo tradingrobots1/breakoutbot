@@ -1071,12 +1071,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "DUO": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 0.5566,
       "orb_low": 0.54,
       "pdh": 0.58,
       "pct_change_seen": 10.2,
-      "first_seen": "2026-09-04T13:38:54.952434-04:00"
+      "first_seen": "2026-09-04T13:38:54.952434-04:00",
+      "entered_at": "2026-09-04T13:40:19.123193-04:00"
     }
   }
 }

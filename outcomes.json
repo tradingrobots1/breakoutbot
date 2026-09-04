@@ -1207,5 +1207,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "DUO",
+    "entry_datetime": "2026-09-04T13:40:26.675511-04:00",
+    "entry_price": 0.5788999795913696,
+    "orb15": 0.5566,
+    "pdh": 0.58,
+    "pct_change_seen": 10.2,
+    "stop_price": 0.54,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2232.13,
+    "risk_amount": 11.16,
+    "shares": 286,
+    "position_value": 165.57,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T13:55:26.675511-04:00",
+      "m30": "2026-09-04T14:10:26.675511-04:00",
+      "h1": "2026-09-04T14:40:26.675511-04:00",
+      "h2": "2026-09-04T15:40:26.675511-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
