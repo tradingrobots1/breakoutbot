@@ -93,12 +93,13 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "AREN": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 0.9485,
       "pct_change_seen": 19.1,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "CYCU": {
       "status": "entered",
