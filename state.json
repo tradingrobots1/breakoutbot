@@ -132,7 +132,7 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "UFG": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 0.6265,
       "orb_low": 0.62,
       "pdh": 0.67,
