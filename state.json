@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T09:36:17.341782-04:00",
+  "gainers_last_refresh": "2026-09-04T09:41:25.445176-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -369,6 +369,78 @@
       "pdh": 1.43,
       "pct_change_seen": 7.9,
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "GRDX": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.5,
+      "pct_change_seen": 12.6,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "PMEC": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.507,
+      "pct_change_seen": 11.4,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "CCG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 16.4,
+      "pct_change_seen": 10.8,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "EEIQ": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.01,
+      "pct_change_seen": 0.0,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "ZDAI": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.68,
+      "pct_change_seen": 7.4,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "NNOX": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.79,
+      "pct_change_seen": 12.2,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "BHM": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 8.8,
+      "pct_change_seen": 7.3,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "GOAI": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.75,
+      "pct_change_seen": 7.5,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "JG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 6.48,
+      "pct_change_seen": 7.0,
+      "first_seen": "2026-09-04T09:41:25.445176-04:00"
     }
   }
 }
