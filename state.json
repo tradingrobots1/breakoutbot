@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T09:57:33.593121-04:00",
+  "gainers_last_refresh": "2026-09-04T10:03:09.799319-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -102,7 +102,7 @@
       "rejected_reason": "sin_datos_intradia"
     },
     "CYCU": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 3.59,
       "orb_low": 3.51,
       "pdh": 3.76,
@@ -594,6 +594,49 @@
       "pdh": 0.96,
       "pct_change_seen": 2.2,
       "first_seen": "2026-09-04T09:57:33.593121-04:00"
+    },
+    "BRAG": {
+      "status": "watching",
+      "orb15": 1.35,
+      "orb_low": 1.35,
+      "pdh": 1.37,
+      "pct_change_seen": 15.4,
+      "first_seen": "2026-09-04T10:03:09.799319-04:00"
+    },
+    "NRSN": {
+      "status": "entered",
+      "orb15": 0.4105,
+      "orb_low": 0.4,
+      "pdh": 0.449,
+      "pct_change_seen": 10.8,
+      "first_seen": "2026-09-04T10:03:09.799319-04:00",
+      "entered_at": "2026-09-04T10:03:09.799319-04:00"
+    },
+    "MSGM": {
+      "status": "rejected",
+      "orb15": 4.1801,
+      "orb_low": 4.064,
+      "pdh": 4.27,
+      "pct_change_seen": 8.0,
+      "first_seen": "2026-09-04T10:03:09.799319-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "SMJF": {
+      "status": "rejected",
+      "orb15": 1.1,
+      "orb_low": 1.01,
+      "pdh": 1.1,
+      "pct_change_seen": 6.7,
+      "first_seen": "2026-09-04T10:03:09.799319-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "NDRA": {
+      "status": "watching",
+      "orb15": 5.88,
+      "orb_low": 5.7,
+      "pdh": 6.45,
+      "pct_change_seen": 7.0,
+      "first_seen": "2026-09-04T10:03:09.799319-04:00"
     }
   }
 }
