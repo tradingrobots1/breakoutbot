@@ -959,5 +959,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "FBGL",
+    "entry_datetime": "2026-09-04T10:51:27.042355-04:00",
+    "entry_price": 0.39899998903274536,
+    "orb15": 0.3597,
+    "pdh": 0.4,
+    "pct_change_seen": 9.3,
+    "stop_price": 0.3597,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2326.16,
+    "risk_amount": 11.63,
+    "shares": 295,
+    "position_value": 117.7,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T11:06:27.042355-04:00",
+      "m30": "2026-09-04T11:21:27.042355-04:00",
+      "h1": "2026-09-04T11:51:27.042355-04:00",
+      "h2": "2026-09-04T12:51:27.042355-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]

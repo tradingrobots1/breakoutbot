@@ -326,12 +326,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "FBGL": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 0.3597,
       "orb_low": 0.3597,
       "pdh": 0.4,
       "pct_change_seen": 9.3,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "entered_at": "2026-09-04T10:51:20.325424-04:00"
     },
     "ATXG": {
       "status": "rejected",
