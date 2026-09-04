@@ -788,12 +788,13 @@
       "entered_at": "2026-09-04T10:36:05.739629-04:00"
     },
     "GIGM": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.38,
       "pct_change_seen": 8.6,
-      "first_seen": "2026-09-04T10:36:05.739629-04:00"
+      "first_seen": "2026-09-04T10:36:05.739629-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "GMHS": {
       "status": "entered",
