@@ -115,12 +115,13 @@
       "entered_at": "2026-09-04T09:50:39.879216-04:00"
     },
     "NTRB": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 5.66,
       "orb_low": 5.304,
       "pdh": 5.92,
       "pct_change_seen": -1.8,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "entered_at": "2026-09-04T11:45:14.536619-04:00"
     },
     "LHSW": {
       "status": "watching",
@@ -165,12 +166,13 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "BNC": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 3.42,
       "orb_low": 3.31,
       "pdh": 3.489,
       "pct_change_seen": 2.4,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "entered_at": "2026-09-04T11:45:14.536619-04:00"
     },
     "ABVC": {
       "status": "watching",

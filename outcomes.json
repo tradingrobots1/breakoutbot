@@ -1021,5 +1021,67 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "NTRB",
+    "entry_datetime": "2026-09-04T11:45:21.125732-04:00",
+    "entry_price": 5.669899940490723,
+    "orb15": 5.66,
+    "pdh": 5.92,
+    "pct_change_seen": -1.8,
+    "stop_price": 5.304,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2263.85,
+    "risk_amount": 11.32,
+    "shares": 30,
+    "position_value": 170.1,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T12:00:21.125732-04:00",
+      "m30": "2026-09-04T12:15:21.125732-04:00",
+      "h1": "2026-09-04T12:45:21.125732-04:00",
+      "h2": "2026-09-04T13:45:21.125732-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "BNC",
+    "entry_datetime": "2026-09-04T11:45:21.127851-04:00",
+    "entry_price": 3.4946999549865723,
+    "orb15": 3.42,
+    "pdh": 3.489,
+    "pct_change_seen": 2.4,
+    "stop_price": 3.31,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2263.85,
+    "risk_amount": 11.32,
+    "shares": 61,
+    "position_value": 213.18,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T12:00:21.127851-04:00",
+      "m30": "2026-09-04T12:15:21.127851-04:00",
+      "h1": "2026-09-04T12:45:21.127851-04:00",
+      "h2": "2026-09-04T13:45:21.127851-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
