@@ -238,12 +238,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "NIKI": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 8.05,
       "orb_low": 7.02,
       "pdh": 6.7,
       "pct_change_seen": 12.5,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "MTR": {
       "status": "rejected",
@@ -690,12 +691,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "SST": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 4.0,
       "orb_low": 3.42,
       "pdh": 3.87,
       "pct_change_seen": 8.0,
-      "first_seen": "2026-09-04T10:19:38.536850-04:00"
+      "first_seen": "2026-09-04T10:19:38.536850-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "OSTX": {
       "status": "rejected",
