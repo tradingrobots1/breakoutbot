@@ -521,7 +521,7 @@
       "first_seen": "2026-09-04T09:46:37.213539-04:00"
     },
     "TREO": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 5.05,
       "orb_low": 5.05,
       "pdh": 5.28,
@@ -887,12 +887,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "BRLS": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.21,
       "pct_change_seen": 9.9,
-      "first_seen": "2026-09-04T10:58:19.470587-04:00"
+      "first_seen": "2026-09-04T10:58:19.470587-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "MTEX": {
       "status": "rejected",
