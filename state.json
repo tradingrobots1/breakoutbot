@@ -752,12 +752,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "PLUR": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.45,
       "pct_change_seen": 11.2,
-      "first_seen": "2026-09-04T10:30:39.119797-04:00"
+      "first_seen": "2026-09-04T10:30:39.119797-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "RFL": {
       "status": "rejected",
