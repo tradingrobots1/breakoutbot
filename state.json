@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T14:29:05.762796-04:00",
+  "gainers_last_refresh": "2026-09-04T14:34:40.917694-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -1113,6 +1113,14 @@
       "pdh": 1.37,
       "pct_change_seen": 10.9,
       "first_seen": "2026-09-04T14:12:21.862446-04:00"
+    },
+    "KWM": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.47,
+      "pct_change_seen": 9.2,
+      "first_seen": "2026-09-04T14:34:40.917694-04:00"
     }
   }
 }
