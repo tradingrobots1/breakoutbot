@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T11:59:04.097106-04:00",
+  "gainers_last_refresh": "2026-09-04T12:04:37.748055-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -995,6 +995,23 @@
       "pct_change_seen": 9.1,
       "first_seen": "2026-09-04T11:59:04.097106-04:00",
       "entered_at": "2026-09-04T11:59:04.097106-04:00"
+    },
+    "CIIT": {
+      "status": "rejected",
+      "orb15": 2.9703,
+      "orb_low": 2.87,
+      "pdh": 2.98,
+      "pct_change_seen": 11.8,
+      "first_seen": "2026-09-04T12:04:37.748055-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
+    },
+    "ATHR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.24,
+      "pct_change_seen": 11.6,
+      "first_seen": "2026-09-04T12:04:37.748055-04:00"
     }
   }
 }
