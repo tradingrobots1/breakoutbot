@@ -89,12 +89,13 @@
       "entered_at": "2026-09-04T09:56:09.395393-04:00"
     },
     "BTCS": {
-      "status": "watching",
+      "status": "entered",
       "orb15": 1.44,
       "orb_low": 1.4,
       "pdh": 1.519,
       "pct_change_seen": -4.0,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "entered_at": "2026-09-04T12:40:39.545289-04:00"
     },
     "AREN": {
       "status": "rejected",
