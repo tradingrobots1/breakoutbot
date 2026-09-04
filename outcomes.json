@@ -370,5 +370,160 @@
       "close": "2026-09-03T16:00:00-04:00"
     },
     "resolved": true
+  },
+  {
+    "ticker": "CYCU",
+    "entry_datetime": "2026-09-04T09:50:45.412448-04:00",
+    "entry_price": 3.680000066757202,
+    "orb15": 3.59,
+    "pdh": 3.76,
+    "pct_change_seen": -1.1,
+    "stop_price": 3.51,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 70,
+    "position_value": 257.6,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:05:45.412448-04:00",
+      "m30": "2026-09-04T10:20:45.412448-04:00",
+      "h1": "2026-09-04T10:50:45.412448-04:00",
+      "h2": "2026-09-04T11:50:45.412448-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "UFG",
+    "entry_datetime": "2026-09-04T09:50:45.413695-04:00",
+    "entry_price": 0.6269999742507935,
+    "orb15": 0.6265,
+    "pdh": 0.67,
+    "pct_change_seen": -4.8,
+    "stop_price": 0.62,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 1715,
+    "position_value": 1075.3,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:05:45.413695-04:00",
+      "m30": "2026-09-04T10:20:45.413695-04:00",
+      "h1": "2026-09-04T10:50:45.413695-04:00",
+      "h2": "2026-09-04T11:50:45.413695-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "PRHI",
+    "entry_datetime": "2026-09-04T09:50:45.414620-04:00",
+    "entry_price": 7.929999828338623,
+    "orb15": 7.5528,
+    "pdh": 8.86,
+    "pct_change_seen": 17.1,
+    "stop_price": 7.5,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 27,
+    "position_value": 214.11,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:05:45.414620-04:00",
+      "m30": "2026-09-04T10:20:45.414620-04:00",
+      "h1": "2026-09-04T10:50:45.414620-04:00",
+      "h2": "2026-09-04T11:50:45.414620-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "GRI",
+    "entry_datetime": "2026-09-04T09:50:45.415473-04:00",
+    "entry_price": 2.4045000076293945,
+    "orb15": 2.4,
+    "pdh": 2.5,
+    "pct_change_seen": 3.6,
+    "stop_price": 2.33,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 161,
+    "position_value": 387.12,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:05:45.415473-04:00",
+      "m30": "2026-09-04T10:20:45.415473-04:00",
+      "h1": "2026-09-04T10:50:45.415473-04:00",
+      "h2": "2026-09-04T11:50:45.415473-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
+  },
+  {
+    "ticker": "ELOX",
+    "entry_datetime": "2026-09-04T09:50:45.416340-04:00",
+    "entry_price": 16.469999313354492,
+    "orb15": 16.3,
+    "pdh": 16.98,
+    "pct_change_seen": 14.9,
+    "stop_price": 14.82,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 7,
+    "position_value": 115.29,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:05:45.416340-04:00",
+      "m30": "2026-09-04T10:20:45.416340-04:00",
+      "h1": "2026-09-04T10:50:45.416340-04:00",
+      "h2": "2026-09-04T11:50:45.416340-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
