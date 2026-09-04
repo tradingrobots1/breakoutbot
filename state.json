@@ -450,7 +450,7 @@
       "first_seen": "2026-09-04T09:41:25.445176-04:00"
     },
     "ELOX": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 16.3,
       "orb_low": 14.82,
       "pdh": 16.98,
