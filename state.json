@@ -1107,12 +1107,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "YSXT": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.37,
       "pct_change_seen": 10.9,
-      "first_seen": "2026-09-04T14:12:21.862446-04:00"
+      "first_seen": "2026-09-04T14:12:21.862446-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "KWM": {
       "status": "watching",
