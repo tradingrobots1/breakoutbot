@@ -980,12 +980,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "CURX": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 5.019,
       "pct_change_seen": 9.7,
-      "first_seen": "2026-09-04T11:59:04.097106-04:00"
+      "first_seen": "2026-09-04T11:59:04.097106-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "MBRX": {
       "status": "entered",
