@@ -565,19 +565,19 @@
     "pdh": 2.79,
     "pct_change_seen": -4.0,
     "stop_price": 2.6583,
-    "stopped_out": false,
-    "stop_exit_price": null,
-    "stop_exit_time": null,
+    "stopped_out": true,
+    "stop_exit_price": 2.609999895095825,
+    "stop_exit_time": "2026-09-04T10:00:22.225173-04:00",
     "account_equity_at_entry": 2401.8,
     "risk_amount": 12.01,
     "shares": 232,
     "position_value": 628.72,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": -3.69,
+      "m30": -3.69,
+      "h1": -3.69,
+      "h2": -3.69,
+      "close": -3.69
     },
     "checkpoint_times": {
       "m15": "2026-09-04T10:11:15.547202-04:00",
@@ -586,7 +586,7 @@
       "h2": "2026-09-04T11:56:15.547202-04:00",
       "close": "2026-09-04T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "LHAI",

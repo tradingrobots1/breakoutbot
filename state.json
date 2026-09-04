@@ -35,12 +35,13 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "FCUV": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 20.0,
       "orb_low": 17.66,
       "pdh": 19.95,
       "pct_change_seen": -0.1,
-      "first_seen": "2026-09-04T09:31:10.365146-04:00"
+      "first_seen": "2026-09-04T09:31:10.365146-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "ZOOZ": {
       "status": "watching",
@@ -75,7 +76,7 @@
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
     },
     "YQ": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 2.68,
       "orb_low": 2.6583,
       "pdh": 2.79,
@@ -418,12 +419,13 @@
       "first_seen": "2026-09-04T09:41:25.445176-04:00"
     },
     "NNOX": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 0.8071,
       "orb_low": 0.7201,
       "pdh": 0.79,
       "pct_change_seen": 12.2,
-      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+      "first_seen": "2026-09-04T09:41:25.445176-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "BHM": {
       "status": "watching",
@@ -434,12 +436,13 @@
       "first_seen": "2026-09-04T09:41:25.445176-04:00"
     },
     "GOAI": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 2.9699,
       "orb_low": 2.59,
       "pdh": 2.75,
       "pct_change_seen": 7.5,
-      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+      "first_seen": "2026-09-04T09:41:25.445176-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "JG": {
       "status": "watching",
