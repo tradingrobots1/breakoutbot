@@ -1083,5 +1083,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "NWGL",
+    "entry_datetime": "2026-09-04T11:53:38.616042-04:00",
+    "entry_price": 1.136299967765808,
+    "orb15": 1.01,
+    "pdh": 1.265,
+    "pct_change_seen": 10.3,
+    "stop_price": 0.975,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2232.13,
+    "risk_amount": 11.16,
+    "shares": 69,
+    "position_value": 78.4,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T12:08:38.616042-04:00",
+      "m30": "2026-09-04T12:23:38.616042-04:00",
+      "h1": "2026-09-04T12:53:38.616042-04:00",
+      "h2": "2026-09-04T13:53:38.616042-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
