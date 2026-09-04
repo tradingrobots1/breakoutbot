@@ -413,12 +413,13 @@
       "first_seen": "2026-09-04T09:41:25.445176-04:00"
     },
     "EEIQ": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 3.01,
       "pct_change_seen": 0.0,
-      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+      "first_seen": "2026-09-04T09:41:25.445176-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "ZDAI": {
       "status": "watching",
@@ -438,12 +439,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "BHM": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 8.8,
       "pct_change_seen": 7.3,
-      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+      "first_seen": "2026-09-04T09:41:25.445176-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "GOAI": {
       "status": "rejected",
@@ -455,12 +457,13 @@
       "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "JG": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 6.48,
       "pct_change_seen": 7.0,
-      "first_seen": "2026-09-04T09:41:25.445176-04:00"
+      "first_seen": "2026-09-04T09:41:25.445176-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "ELOX": {
       "status": "stopped",
