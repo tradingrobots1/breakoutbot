@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T09:41:25.445176-04:00",
+  "gainers_last_refresh": "2026-09-04T09:46:37.213539-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -441,6 +441,62 @@
       "pdh": 6.48,
       "pct_change_seen": 7.0,
       "first_seen": "2026-09-04T09:41:25.445176-04:00"
+    },
+    "ELOX": {
+      "status": "watching",
+      "orb15": 16.3,
+      "orb_low": 14.82,
+      "pdh": 16.98,
+      "pct_change_seen": 14.9,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "INEO": {
+      "status": "watching",
+      "orb15": 0.6197,
+      "orb_low": 0.525,
+      "pdh": 0.567,
+      "pct_change_seen": 11.2,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "ADGM": {
+      "status": "watching",
+      "orb15": 0.5799,
+      "orb_low": 0.53,
+      "pdh": 0.548,
+      "pct_change_seen": 2.7,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "FTFT": {
+      "status": "watching",
+      "orb15": 1.85,
+      "orb_low": 1.64,
+      "pdh": 1.8,
+      "pct_change_seen": 10.3,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "LEXX": {
+      "status": "watching",
+      "orb15": 13.149,
+      "orb_low": 12.6619,
+      "pdh": 13.93,
+      "pct_change_seen": 2.8,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "GITS": {
+      "status": "watching",
+      "orb15": 2.2287,
+      "orb_low": 2.2126,
+      "pdh": 2.28,
+      "pct_change_seen": 3.8,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
+    },
+    "TREO": {
+      "status": "watching",
+      "orb15": 5.05,
+      "orb_low": 5.05,
+      "pdh": 5.28,
+      "pct_change_seen": 6.3,
+      "first_seen": "2026-09-04T09:46:37.213539-04:00"
     }
   }
 }
