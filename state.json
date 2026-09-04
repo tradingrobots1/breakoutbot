@@ -245,28 +245,31 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "MTR": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 2.7,
       "pct_change_seen": 12.3,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "VRM": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 10.42,
       "pct_change_seen": 0.0,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "YYGH": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.49,
       "pct_change_seen": 11.4,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "CDTG": {
       "status": "watching",
@@ -277,12 +280,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "GRAN": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.33,
       "pct_change_seen": 10.9,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "SVRE": {
       "status": "watching",
@@ -293,12 +297,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "BGMS": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 0.93,
       "pct_change_seen": 10.7,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "SOAR": {
       "status": "watching",
@@ -325,12 +330,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "ATXG": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 3.66,
       "pct_change_seen": 9.2,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "BRNS": {
       "status": "watching",
@@ -349,12 +355,13 @@
       "first_seen": "2026-09-04T09:36:17.341782-04:00"
     },
     "JXG": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 9.57,
       "pct_change_seen": 8.1,
-      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+      "first_seen": "2026-09-04T09:36:17.341782-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "VIDA": {
       "status": "watching",
