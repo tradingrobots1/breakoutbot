@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "gainers_last_refresh": "2026-09-04T09:31:10.365146-04:00",
+  "gainers_last_refresh": "2026-09-04T09:36:17.341782-04:00",
   "tickers": {
     "IMRN": {
       "status": "watching",
@@ -201,6 +201,174 @@
       "pdh": 2.15,
       "pct_change_seen": -0.0,
       "first_seen": "2026-09-04T09:31:10.365146-04:00"
+    },
+    "NCPL": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.962,
+      "pct_change_seen": 16.8,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "PLAG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.65,
+      "pct_change_seen": 16.7,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "WETO": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 4.07,
+      "pct_change_seen": 10.2,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "NIKI": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 6.7,
+      "pct_change_seen": 12.5,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "MTR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.7,
+      "pct_change_seen": 12.3,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "VRM": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 10.42,
+      "pct_change_seen": 0.0,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "YYGH": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.49,
+      "pct_change_seen": 11.4,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "CDTG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.947,
+      "pct_change_seen": 12.8,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "GRAN": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.33,
+      "pct_change_seen": 10.9,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "SVRE": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.93,
+      "pct_change_seen": -2.1,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "BGMS": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.93,
+      "pct_change_seen": 10.7,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "SOAR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.265,
+      "pct_change_seen": 11.4,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "ESLA": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.744,
+      "pct_change_seen": 9.0,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "FBGL": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.4,
+      "pct_change_seen": 9.3,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "ATXG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.66,
+      "pct_change_seen": 9.2,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "BRNS": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.743,
+      "pct_change_seen": 8.8,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "MODD": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.67,
+      "pct_change_seen": 8.8,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "JXG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 9.57,
+      "pct_change_seen": 8.1,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "VIDA": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 3.06,
+      "pct_change_seen": 5.2,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "RECT": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.41,
+      "pct_change_seen": 7.9,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
+    },
+    "RPID": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.43,
+      "pct_change_seen": 7.9,
+      "first_seen": "2026-09-04T09:36:17.341782-04:00"
     }
   }
 }
