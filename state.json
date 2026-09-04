@@ -893,12 +893,13 @@
       "first_seen": "2026-09-04T10:58:19.470587-04:00"
     },
     "MTEX": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 8.05,
       "orb_low": 7.395,
       "pdh": 7.42,
       "pct_change_seen": 11.9,
-      "first_seen": "2026-09-04T11:03:52.573539-04:00"
+      "first_seen": "2026-09-04T11:03:52.573539-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "GRML": {
       "status": "entered",
