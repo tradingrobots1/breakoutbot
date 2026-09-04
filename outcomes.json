@@ -897,5 +897,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "BIAF",
+    "entry_datetime": "2026-09-04T10:40:21.114240-04:00",
+    "entry_price": 12.420000076293945,
+    "orb15": 12.06,
+    "pdh": 13.58,
+    "pct_change_seen": -13.1,
+    "stop_price": 11.0,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2326.16,
+    "risk_amount": 11.63,
+    "shares": 8,
+    "position_value": 99.36,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:55:21.114240-04:00",
+      "m30": "2026-09-04T11:10:21.114240-04:00",
+      "h1": "2026-09-04T11:40:21.114240-04:00",
+      "h2": "2026-09-04T12:40:21.114240-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
