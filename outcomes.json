@@ -556,5 +556,36 @@
       "close": "2026-09-04T16:00:00-04:00"
     },
     "resolved": false
+  },
+  {
+    "ticker": "YQ",
+    "entry_datetime": "2026-09-04T09:56:15.547202-04:00",
+    "entry_price": 2.7100000381469727,
+    "orb15": 2.68,
+    "pdh": 2.79,
+    "pct_change_seen": -4.0,
+    "stop_price": 2.6583,
+    "stopped_out": false,
+    "stop_exit_price": null,
+    "stop_exit_time": null,
+    "account_equity_at_entry": 2401.8,
+    "risk_amount": 12.01,
+    "shares": 232,
+    "position_value": 628.72,
+    "checkpoints": {
+      "m15": null,
+      "m30": null,
+      "h1": null,
+      "h2": null,
+      "close": null
+    },
+    "checkpoint_times": {
+      "m15": "2026-09-04T10:11:15.547202-04:00",
+      "m30": "2026-09-04T10:26:15.547202-04:00",
+      "h1": "2026-09-04T10:56:15.547202-04:00",
+      "h2": "2026-09-04T11:56:15.547202-04:00",
+      "close": "2026-09-04T16:00:00-04:00"
+    },
+    "resolved": false
   }
 ]
