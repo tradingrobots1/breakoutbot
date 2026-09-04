@@ -587,7 +587,7 @@
       "first_seen": "2026-09-04T09:57:33.593121-04:00"
     },
     "LHAI": {
-      "status": "entered",
+      "status": "stopped",
       "orb15": 1.26,
       "orb_low": 1.19,
       "pdh": 1.45,
