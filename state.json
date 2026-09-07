@@ -172,20 +172,22 @@
       "entered_at": "2026-09-07T09:45:06.924155-04:00"
     },
     "YSXT": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.56,
       "pct_change_seen": 13.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00"
+      "first_seen": "2026-09-07T09:33:39.664376-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "RYOJ": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 5.5,
       "pct_change_seen": 6.2,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00"
+      "first_seen": "2026-09-07T09:33:39.664376-04:00",
+      "rejected_reason": "sin_datos_intradia"
     },
     "IBO": {
       "status": "entered",
@@ -215,12 +217,13 @@
       "entered_at": "2026-09-07T09:45:06.924155-04:00"
     },
     "YYGH": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.45,
       "pct_change_seen": 11.4,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00"
+      "first_seen": "2026-09-07T09:33:39.664376-04:00",
+      "rejected_reason": "sin_datos_intradia"
     }
   }
 }
