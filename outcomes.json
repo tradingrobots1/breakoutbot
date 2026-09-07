@@ -1286,11 +1286,11 @@
     "shares": 37,
     "position_value": 37.74,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.974928-04:00",
@@ -1299,7 +1299,7 @@
       "h2": "2026-09-07T11:45:13.974928-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NRSN",
@@ -1317,11 +1317,11 @@
     "shares": 103,
     "position_value": 52.63,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.977011-04:00",
@@ -1330,7 +1330,7 @@
       "h2": "2026-09-07T11:45:13.977011-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GRI",
@@ -1348,11 +1348,11 @@
     "shares": 20,
     "position_value": 57.6,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.978761-04:00",
@@ -1361,7 +1361,7 @@
       "h2": "2026-09-07T11:45:13.978761-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "GRNQ",
@@ -1379,11 +1379,11 @@
     "shares": 3,
     "position_value": 56.1,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.980509-04:00",
@@ -1392,7 +1392,7 @@
       "h2": "2026-09-07T11:45:13.980509-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MTEX",
@@ -1410,11 +1410,11 @@
     "shares": 7,
     "position_value": 63.0,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.982281-04:00",
@@ -1423,7 +1423,7 @@
       "h2": "2026-09-07T11:45:13.982281-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NWGL",
@@ -1441,11 +1441,11 @@
     "shares": 39,
     "position_value": 49.53,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.984060-04:00",
@@ -1454,7 +1454,7 @@
       "h2": "2026-09-07T11:45:13.984060-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "SJ",
@@ -1472,11 +1472,11 @@
     "shares": 57,
     "position_value": 59.74,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.985895-04:00",
@@ -1485,7 +1485,7 @@
       "h2": "2026-09-07T11:45:13.985895-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BIAF",
@@ -1503,11 +1503,11 @@
     "shares": 2,
     "position_value": 30.54,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.987729-04:00",
@@ -1516,7 +1516,7 @@
       "h2": "2026-09-07T11:45:13.987729-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "PAAI",
@@ -1534,11 +1534,11 @@
     "shares": 68,
     "position_value": 70.72,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.989589-04:00",
@@ -1547,7 +1547,7 @@
       "h2": "2026-09-07T11:45:13.989589-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MATH",
@@ -1565,11 +1565,11 @@
     "shares": 81,
     "position_value": 78.98,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.991519-04:00",
@@ -1578,7 +1578,7 @@
       "h2": "2026-09-07T11:45:13.991519-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "NNOX",
@@ -1596,11 +1596,11 @@
     "shares": 105,
     "position_value": 87.15,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.993742-04:00",
@@ -1609,7 +1609,7 @@
       "h2": "2026-09-07T11:45:13.993742-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "ONMD",
@@ -1627,11 +1627,11 @@
     "shares": 118,
     "position_value": 80.48,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.995694-04:00",
@@ -1640,7 +1640,7 @@
       "h2": "2026-09-07T11:45:13.995694-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "LEXX",
@@ -1658,11 +1658,11 @@
     "shares": 7,
     "position_value": 99.05,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.997734-04:00",
@@ -1671,7 +1671,7 @@
       "h2": "2026-09-07T11:45:13.997734-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "SMX",
@@ -1689,11 +1689,11 @@
     "shares": 6,
     "position_value": 116.88,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:13.999738-04:00",
@@ -1702,7 +1702,7 @@
       "h2": "2026-09-07T11:45:13.999738-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "TANH",
@@ -1720,11 +1720,11 @@
     "shares": 2,
     "position_value": 43.74,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.001776-04:00",
@@ -1733,7 +1733,7 @@
       "h2": "2026-09-07T11:45:14.001776-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "BNKK",
@@ -1751,11 +1751,11 @@
     "shares": 66,
     "position_value": 91.74,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.003815-04:00",
@@ -1764,7 +1764,7 @@
       "h2": "2026-09-07T11:45:14.003815-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MSGM",
@@ -1782,11 +1782,11 @@
     "shares": 22,
     "position_value": 100.76,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.005962-04:00",
@@ -1795,7 +1795,7 @@
       "h2": "2026-09-07T11:45:14.005962-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "IBO",
@@ -1813,11 +1813,11 @@
     "shares": 189,
     "position_value": 102.06,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.008166-04:00",
@@ -1826,7 +1826,7 @@
       "h2": "2026-09-07T11:45:14.008166-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "ZTG",
@@ -1844,11 +1844,11 @@
     "shares": 88,
     "position_value": 66.88,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.010371-04:00",
@@ -1857,7 +1857,7 @@
       "h2": "2026-09-07T11:45:14.010371-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   },
   {
     "ticker": "MF",
@@ -1875,11 +1875,11 @@
     "shares": 13,
     "position_value": 151.58,
     "checkpoints": {
-      "m15": null,
-      "m30": null,
-      "h1": null,
-      "h2": null,
-      "close": null
+      "m15": 0.0,
+      "m30": 0.0,
+      "h1": 0.0,
+      "h2": 0.0,
+      "close": 0.0
     },
     "checkpoint_times": {
       "m15": "2026-09-07T10:00:14.012612-04:00",
@@ -1888,6 +1888,6 @@
       "h2": "2026-09-07T11:45:14.012612-04:00",
       "close": "2026-09-07T16:00:00-04:00"
     },
-    "resolved": false
+    "resolved": true
   }
 ]
