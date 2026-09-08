@@ -1,229 +1,206 @@
 {
-  "date": "2026-09-07",
-  "gainers_last_refresh": "2026-09-07T15:14:25.941684-04:00",
+  "date": "2026-09-08",
+  "gainers_last_refresh": "2026-09-08T09:33:58.779503-04:00",
   "tickers": {
-    "IMRN": {
+    "SFWL": {
       "status": "watching",
-      "orb15": 1.93,
-      "orb_low": 1.74,
-      "pdh": 1.99,
-      "pct_change_seen": 62.2,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00"
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.96,
+      "pct_change_seen": 6.6,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "CDTG": {
+    "PDSB": {
       "status": "watching",
-      "orb15": 1.4227,
-      "orb_low": 0.9139,
-      "pdh": 1.6,
-      "pct_change_seen": 46.7,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00"
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.238,
+      "pct_change_seen": 191.7,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "ONCO": {
-      "status": "entered",
-      "orb15": 0.7385,
-      "orb_low": 0.7106,
-      "pdh": 1.05,
-      "pct_change_seen": 38.0,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
+    "WYHG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 4.07,
+      "pct_change_seen": 30.2,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "NRSN": {
-      "status": "entered",
-      "orb15": 0.4105,
-      "orb_low": 0.4,
-      "pdh": 0.526,
-      "pct_change_seen": 27.2,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "GRI": {
-      "status": "entered",
-      "orb15": 2.4,
-      "orb_low": 2.33,
-      "pdh": 3.36,
+    "ARBE": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.64,
       "pct_change_seen": 25.8,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "GRNQ": {
-      "status": "entered",
-      "orb15": 15.0,
-      "orb_low": 15.0,
-      "pdh": 20.09,
-      "pct_change_seen": 24.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
+    "MOBX": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.135,
+      "pct_change_seen": 22.0,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "MTEX": {
-      "status": "entered",
-      "orb15": 8.05,
-      "orb_low": 7.395,
-      "pdh": 9.2,
-      "pct_change_seen": 23.5,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "NWGL": {
-      "status": "entered",
-      "orb15": 1.01,
-      "orb_low": 0.975,
-      "pdh": 1.41,
-      "pct_change_seen": 23.3,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "SJ": {
-      "status": "entered",
-      "orb15": 0.8461,
-      "orb_low": 0.846,
-      "pdh": 1.05,
-      "pct_change_seen": 20.5,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "BIAF": {
-      "status": "entered",
-      "orb15": 12.06,
-      "orb_low": 11.0,
-      "pdh": 20.35,
-      "pct_change_seen": 19.5,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "PAAI": {
-      "status": "entered",
-      "orb15": 0.929,
-      "orb_low": 0.871,
-      "pdh": 1.1,
-      "pct_change_seen": 17.3,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "MATH": {
-      "status": "entered",
-      "orb15": 0.8518,
-      "orb_low": 0.8335,
-      "pdh": 0.98,
-      "pct_change_seen": 17.0,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "NNOX": {
-      "status": "entered",
-      "orb15": 0.8071,
-      "orb_low": 0.7201,
-      "pdh": 0.869,
-      "pct_change_seen": 16.4,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "ONMD": {
-      "status": "entered",
-      "orb15": 0.595,
-      "orb_low": 0.585,
-      "pdh": 0.69,
-      "pct_change_seen": 15.1,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "LEXX": {
-      "status": "entered",
-      "orb15": 13.149,
-      "orb_low": 12.6619,
-      "pdh": 14.37,
-      "pct_change_seen": 14.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "SMX": {
-      "status": "entered",
-      "orb15": 17.7372,
-      "orb_low": 17.605,
-      "pdh": 20.0,
-      "pct_change_seen": 14.1,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "TANH": {
-      "status": "entered",
-      "orb15": 20.99,
-      "orb_low": 17.4,
-      "pdh": 25.0,
-      "pct_change_seen": 14.0,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "BNKK": {
-      "status": "entered",
-      "orb15": 1.2669,
-      "orb_low": 1.2154,
-      "pdh": 1.39,
-      "pct_change_seen": 13.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "MSGM": {
-      "status": "entered",
-      "orb15": 4.1801,
-      "orb_low": 4.064,
-      "pdh": 4.68,
-      "pct_change_seen": 13.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "YSXT": {
-      "status": "rejected",
+    "LXEH": {
+      "status": "watching",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.56,
-      "pct_change_seen": 13.9,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "rejected_reason": "sin_datos_intradia"
+      "pct_change_seen": 20.0,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "ISPC": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.57,
+      "pct_change_seen": 24.2,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "NUR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.88,
+      "pct_change_seen": 19.4,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "ELUT": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.89,
+      "pct_change_seen": 14.1,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "TWG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.517,
+      "pct_change_seen": 20.4,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "JFU": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.54,
+      "pct_change_seen": 16.5,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "ATER": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.955,
+      "pct_change_seen": 15.0,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "HCWC": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 7.12,
+      "pct_change_seen": 13.3,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "CDTG": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.6,
+      "pct_change_seen": 10.9,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
     "RYOJ": {
-      "status": "rejected",
+      "status": "watching",
       "orb15": null,
       "orb_low": null,
       "pdh": 5.5,
       "pct_change_seen": 6.2,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "rejected_reason": "sin_datos_intradia"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
     "IBO": {
-      "status": "entered",
-      "orb15": 0.48,
-      "orb_low": 0.479,
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
       "pdh": 0.64,
-      "pct_change_seen": 12.5,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
+      "pct_change_seen": -2.8,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
-    "ZTG": {
-      "status": "entered",
-      "orb15": 0.7299,
-      "orb_low": 0.63,
-      "pdh": 1.04,
-      "pct_change_seen": 11.8,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
-    },
-    "MF": {
-      "status": "entered",
-      "orb15": 10.8,
-      "orb_low": 10.8,
-      "pdh": 14.29,
-      "pct_change_seen": 8.1,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "entered_at": "2026-09-07T09:45:06.924155-04:00"
+    "TGL": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.55,
+      "pct_change_seen": 12.4,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
     "YYGH": {
-      "status": "rejected",
+      "status": "watching",
       "orb15": null,
       "orb_low": null,
       "pdh": 1.45,
       "pct_change_seen": 11.4,
-      "first_seen": "2026-09-07T09:33:39.664376-04:00",
-      "rejected_reason": "sin_datos_intradia"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "NTCL": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.14,
+      "pct_change_seen": 11.3,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "XCUR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 1.28,
+      "pct_change_seen": 6.4,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "YQ": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.92,
+      "pct_change_seen": 10.3,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "HXHX": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.508,
+      "pct_change_seen": 9.7,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "VIDA": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 2.65,
+      "pct_change_seen": 12.3,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "WWR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.56,
+      "pct_change_seen": 10.7,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+    },
+    "SOAR": {
+      "status": "watching",
+      "orb15": null,
+      "orb_low": null,
+      "pdh": 0.248,
+      "pct_change_seen": -2.2,
+      "first_seen": "2026-09-08T09:33:58.779503-04:00"
     }
   }
 }
