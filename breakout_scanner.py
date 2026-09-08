@@ -212,6 +212,12 @@ def get_orb_window(ticker: str) -> tuple[float, float] | None:
     if df.empty:
         return None
     df.index = df.index.tz_convert(ET)
+    today_str = now_et().strftime("%Y-%m-%d")
+    df = df[df.index.strftime("%Y-%m-%d") == today_str]
+    if df.empty:
+        # yfinance puede devolver la última sesión disponible (ej. festivo)
+        # en vez de datos de hoy — sin velas de hoy, no hay ORB que calcular.
+        return None
     window = df.between_time(cfg.market_open, cfg.orb_end, inclusive="left")
     if window.empty:
         return None
@@ -248,6 +254,11 @@ def get_latest_completed_close(ticker: str) -> tuple[float, datetime] | None:
         return None
     df.index = df.index.tz_convert(ET)
     now = now_et()
+    today_str = now.strftime("%Y-%m-%d")
+    df = df[df.index.strftime("%Y-%m-%d") == today_str]
+    if df.empty:
+        # datos obsoletos de una sesión anterior (ej. festivo bursátil)
+        return None
     post_orb = df[df.index.strftime("%H:%M") >= cfg.orb_end]
     completed = post_orb[(post_orb.index + timedelta(minutes=5)) <= now]
     if completed.empty:
