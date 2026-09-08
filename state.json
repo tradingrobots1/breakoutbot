@@ -91,12 +91,13 @@
       "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
     "ATER": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 0.8679,
       "orb_low": 0.66,
       "pdh": 0.955,
       "pct_change_seen": 15.0,
-      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "HCWC": {
       "status": "watching",
@@ -155,20 +156,22 @@
       "first_seen": "2026-09-08T09:33:58.779503-04:00"
     },
     "XCUR": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 1.445,
       "orb_low": 1.31,
       "pdh": 1.28,
       "pct_change_seen": 6.4,
-      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "YQ": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 3.2597,
       "orb_low": 3.03,
       "pdh": 2.92,
       "pct_change_seen": 10.3,
-      "first_seen": "2026-09-08T09:33:58.779503-04:00"
+      "first_seen": "2026-09-08T09:33:58.779503-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "HXHX": {
       "status": "watching",
@@ -275,20 +278,22 @@
       "first_seen": "2026-09-08T09:44:13.356134-04:00"
     },
     "ATNM": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 1.15,
       "orb_low": 1.06,
       "pdh": 1.055,
       "pct_change_seen": 13.6,
-      "first_seen": "2026-09-08T09:49:34.219023-04:00"
+      "first_seen": "2026-09-08T09:49:34.219023-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "YARW": {
-      "status": "watching",
+      "status": "rejected",
       "orb15": 31.925,
       "orb_low": 30.43,
       "pdh": 31.9,
       "pct_change_seen": 10.5,
-      "first_seen": "2026-09-08T09:49:34.219023-04:00"
+      "first_seen": "2026-09-08T09:49:34.219023-04:00",
+      "rejected_reason": "orb15_break_pero_pdh_ya_roto"
     },
     "HSCS": {
       "status": "watching",
