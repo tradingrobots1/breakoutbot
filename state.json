@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "gainers_last_refresh": "2026-09-08T09:44:13.356134-04:00",
+  "gainers_last_refresh": "2026-09-08T09:49:34.219023-04:00",
   "tickers": {
     "SFWL": {
       "status": "watching",
@@ -273,6 +273,30 @@
       "pdh": 0.92,
       "pct_change_seen": 3.8,
       "first_seen": "2026-09-08T09:44:13.356134-04:00"
+    },
+    "ATNM": {
+      "status": "watching",
+      "orb15": 1.15,
+      "orb_low": 1.06,
+      "pdh": 1.055,
+      "pct_change_seen": 13.6,
+      "first_seen": "2026-09-08T09:49:34.219023-04:00"
+    },
+    "YARW": {
+      "status": "watching",
+      "orb15": 31.925,
+      "orb_low": 30.43,
+      "pdh": 31.9,
+      "pct_change_seen": 10.5,
+      "first_seen": "2026-09-08T09:49:34.219023-04:00"
+    },
+    "HSCS": {
+      "status": "watching",
+      "orb15": 4.16,
+      "orb_low": 3.905,
+      "pdh": 3.83,
+      "pct_change_seen": 9.9,
+      "first_seen": "2026-09-08T09:49:34.219023-04:00"
     }
   }
 }
